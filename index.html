@@ -34,7 +34,10 @@
 </head>
 
 <body>
-
+</br>
+   <div id="announcement" class="announcement">
+      <p>All commissions/orders will be slowed down from the 30th. Accepting only a limited number of commissions a week.</p>
+    </div>
    <!-- Header
    ================================================== -->
    <header id="home">
@@ -582,7 +585,10 @@
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
-
+   <script>
+      document.getElementById("announcement").addEventListener('click', function() {
+         document.getElementById("announcement").style.display = "none";
+      });
+   </script>
 </body>
-
 </html>
