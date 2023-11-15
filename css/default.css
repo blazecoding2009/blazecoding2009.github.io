@@ -804,17 +804,3 @@ properly.
 
 
 
-
-
-.announcement {
-   display: inline-block;
-   height: 100%;
-   text-align: center;
-   width: 100%;
-   color: white;
-   margin: auto;
-   padding: auto;
-   padding-top: 12px;
-   vertical-align: middle;
-   font-size: 0.8em;
-}
