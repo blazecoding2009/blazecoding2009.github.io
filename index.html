@@ -227,20 +227,48 @@
                             </a>
                         </div>
                     </div>
-                    <!-- <div class="columns portfolio-item">
+                    <div class="columns portfolio-item">
                         <div class="item-wrap">
                             <a href="#modal-02" title="">
-                                <img alt="" src="images/portfolio/tensorforest.png">
+                                <img alt="" src="images/portfolio/frc_2024.png">
                                 <div class="overlay">
                                     <div class="portfolio-item-meta">
-                                        <h5>TensorForest</h5>
-                                        <p>A drone which could change forests</p>
+                                        <h5>FRC 1360 - 2024</h5>
+                                        <p>A FRC Competition Robot</p>
                                     </div>
                                 </div>
                                 <div class="link-icon"><i class="icon-plus"></i></div>
                             </a>
                         </div>
-                    </div> -->
+                    </div>
+                    <div class="columns portfolio-item">
+                        <div class="item-wrap">
+                            <a href="#modal-03" title="">
+                                <img alt="" src="images/portfolio/frc_2023.jpg">
+                                <div class="overlay">
+                                    <div class="portfolio-item-meta">
+                                        <h5>FRC 1360 - 2023</h5>
+                                        <p>A FRC Competition Robot</p>
+                                    </div>
+                                </div>
+                                <div class="link-icon"><i class="icon-plus"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="columns portfolio-item">
+                        <div class="item-wrap">
+                            <a href="#modal-04" title="">
+                                <img alt="" src="images/portfolio/tensorforest.png">
+                                <div class="overlay">
+                                    <div class="portfolio-item-meta">
+                                        <h5>TensorForest</h5>
+                                        <p>A drone which could change forest fires</p>
+                                    </div>
+                                </div>
+                                <div class="link-icon"><i class="icon-plus"></i></div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -264,6 +292,49 @@
                 <a class="popup-modal-dismiss">Close</a>
             </div>
         </div><!-- modal-01 End -->
+
+        <div id="modal-02" class="popup-modal mfp-hide">
+            <img class="scale-with-grid" src="images/portfolio/frc_2024.png" alt="" />
+
+            <div class="description-box">
+                <h4>FRC 1360 - Apollo</h4>
+                <p>A competitive robot built for the FRC 2024 season by Team 1360. I contributed to the programming in Java and assisted with the build. I was also the programming subteam co-lead. During the offseason, I developed an RFID attendance system and was involved in programming, build, design, and awards.</p>                <span class="categories"><i class="fa fa-tag"></i>3D Printing, Machining, Designing, Manufacturing</span>
+            </div>
+
+            <div class="link-box">
+                <a href="https://1360.ca" target="_blank">Team Website</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+        </div><!-- modal-02 End -->
+
+        <div id="modal-03" class="popup-modal mfp-hide">
+            <img class="scale-with-grid" src="images/portfolio/frc_2023.jpg" alt="" />
+
+            <div class="description-box">
+                <h4>FRC 1360 - Armstrong</h4>
+                <p>A competitive robot built for the FRC 2023 season by Team 1360. I contributed to the programming in Java. I was a part of Media and took photos of our robot at competition and was a part of outreach during the summer.</p>                <span class="categories"><i class="fa fa-tag"></i>3D Printing, Machining, Designing, Manufacturing</span>
+            </div>
+
+            <div class="link-box">
+                <a href="https://1360.ca" target="_blank">Team Website</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+        </div><!-- modal-03 End -->
+
+        <div id="modal-04" class="popup-modal mfp-hide">
+            <img class="scale-with-grid" src="images/portfolio/tensorforest.png" alt="" />
+
+            <div class="description-box">
+                <h4>TensorForest</h4>
+                <p>TensorForest uses drones to capture high-resolution forest imagery and assess vegetation flammability. It automates data collection, creating detailed heatmaps to identify high-risk fire areas.</p>
+                <p>Team Members: Arnnav Kudale, Shayaan Azeem, and Rohanth Marem</p>
+            </div>
+
+            <div class="link-box">
+                <a href="https://docs.google.com/document/d/1v3bA5fNaukXWuISGC8W7PLlMZAQRv3yj9H5bLOerzcI/edit" target="_blank">Project Report</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+        </div><!-- modal-04 End -->
 
 
     </section>
@@ -342,5 +413,19 @@
         </div>
         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.portfolio-item a').magnificPopup({
+            type: 'inline',
+            midClick: true,
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+</script>
 </body>
 </html>

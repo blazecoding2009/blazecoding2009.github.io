@@ -425,7 +425,10 @@ ul#nav li.current a { color: #F06000; }
 }
 
 /* Portfolio Content */
-#portfolio-wrapper .columns { margin-bottom: 36px; }
+
+#portfolio-wrapper .columns { 
+   margin-bottom: 36px; 
+}
 .portfolio-item .item-wrap {
    background: #fff;
    overflow: hidden;
@@ -486,7 +489,8 @@ ul#nav li.current a { color: #F06000; }
    margin-top: -15px;
 }
 .portfolio-item .item-wrap img {
-   vertical-align: bottom;
+   width: 100%;
+   height: auto;
 }
 .portfolio-item .portfolio-item-meta { padding: 18px }
 .portfolio-item .portfolio-item-meta h5 {
