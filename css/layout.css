@@ -325,6 +325,63 @@ ul#nav li.current a { color: #F06000; }
    border-radius: 3px 0 0 3px;
 }
 
+/* General styling for skill icons */
+.skill-icon {
+   margin-right: 10px;
+   font-size: 18px;
+   color: #11ABB0;
+ }
+ 
+ /* Enhanced Progress Bar */
+ .progress-bar {
+   background: linear-gradient(90deg, #11ABB0 0%, #3d4145 100%);
+   border-radius: 5px;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+   transition: width 0.5s ease-in-out;
+ }
+ 
+ /* Progress Percentage */
+ .progress-percentage {
+   font-size: 14px;
+   font-weight: bold;
+   color: #313131;
+   margin-left: 10px;
+ }
+ 
+ /* Tooltip for skill levels */
+ .skill-tooltip {
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+ }
+ 
+ .skill-tooltip .tooltip-text {
+   visibility: hidden;
+   width: 120px;
+   background-color: #313131;
+   color: #fff;
+   text-align: center;
+   padding: 5px 0;
+   border-radius: 6px;
+ 
+   /* Positioning */
+   position: absolute;
+   z-index: 1;
+   bottom: 125%;
+   left: 50%;
+   margin-left: -60px;
+ 
+   /* Fade in tooltip */
+   opacity: 0;
+   transition: opacity 0.3s;
+ }
+ 
+ .skill-tooltip:hover .tooltip-text {
+   visibility: visible;
+   opacity: 1;
+ }
+ 
+
 .photoshop {
   	width: 60%;
   	-moz-animation: photoshop 2s ease;
