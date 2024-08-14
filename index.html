@@ -40,11 +40,6 @@
                     <li><a class="smoothscroll" href="#about">About</a></li>
                     <li><a class="smoothscroll" href="#resume">Resume</a></li>
                     <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-                    <li>
-                        <a class="smoothscroll" href="#testimonials"
-                            >Testimonials</a
-                        >
-                    </li>
                     <li><a class="smoothscroll" href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -66,7 +61,7 @@
                     <hr />
                     <ul class="social">
                         <li>
-                            <a href="https://twitter.com/Cblaze1111"
+                            <a href="https://twitter.com/cblaze1111"
                                 ><i class="fa-brands fa-square-twitter"></i
                             ></a>
                         </li>
@@ -283,6 +278,23 @@
                     </div>
                     <div class="row item">
                         <div class="twelve columns">
+                            <h3>DRDO-AT-DYSL (drdo.gov.in)</h3>
+                            <p class="info">
+                                Intern <span>&bull;</span>
+                                <em class="date">July 2024 - August 2024</em>
+                            </p>
+                            <p>
+                                I interned at the DRDO Young Scientist's
+                                Labratory for Asymetrical Technologies. There, I
+                                learnt how to use ROS for autonomus flight and
+                                created a drone which does this. Technologies
+                                which were used were ROS2 Humble, Ubuntu 22.04,
+                                and Python.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="twelve columns">
                             <h3>RagnoHacks (ragnohacks.ca)</h3>
                             <p class="info">
                                 Organizer - 3D Printing and Hardware
@@ -311,7 +323,7 @@
                             <p>
                                 Developed backend APIs, managing data storage
                                 and user authentication systems using Python and
-                                Django.
+                                Django. Created the first ever working prototype of the fact checker.
                             </p>
                         </div>
                     </div>
@@ -769,19 +781,6 @@
                                 />
                             </div>
                             <div>
-                                <label for="contactEmail"
-                                    >Email
-                                    <span class="required">*</span></label
-                                >
-                                <input
-                                    type="email"
-                                    size="35"
-                                    id="contactEmail"
-                                    name="contactEmail"
-                                    required
-                                />
-                            </div>
-                            <div>
                                 <label for="contactSubject">Subject</label>
                                 <input
                                     type="text"
@@ -873,7 +872,7 @@
             </div>
         </footer>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script src="js/jquery.flexslider.js"></script>
         <script src="js/waypoints.js"></script>
         <script src="js/jquery.fittext.js"></script>
@@ -882,7 +881,7 @@
         <script src="js/spin.js"></script>
         <script src="js/init.js"></script>
         <script>
-            $(document).ready(function () {
+            document.ready(function () {
                 $('.portfolio-item a').magnificPopup({
                     type: 'inline',
                     midClick: true,
