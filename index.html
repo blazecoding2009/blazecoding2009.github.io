@@ -1,534 +1,1004 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Arnnav Kudale - Resume/Portfolio</title>
-        <meta name="description" content="Hi! I'm Arnnav Kudale, a student and developer from Oakville, Canada. Explore my portfolio, achievements, and contact details." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/default.css" />
-        <link rel="stylesheet" href="css/layout.css" />
-        <link rel="stylesheet" href="css/media-queries.css" />
-        <link rel="stylesheet" href="css/magnific-popup.css" />
-        <!-- JavaScript -->
-        <script src="js/modernizr.js"></script>
-        <script src="js/contact-form.js" defer></script>
-        <!-- Including the JavaScript file -->
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico" />
-    </head>
-    <body>
-        <!-- Header -->
-        <header id="home">
-            <nav id="nav-wrap">
-                <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-                <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-                <ul id="nav" class="nav">
-                    <li class="current">
-                        <a class="smoothscroll" href="#home">Home</a>
-                    </li>
-                    <li><a class="smoothscroll" href="#about">About</a></li>
-                    <li><a class="smoothscroll" href="#resume">Resume</a></li>
-                    <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-                    <li><a class="smoothscroll" href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="row banner">
-                <div class="banner-text">
-                    <h1 class="responsive-headline">I'm Arnnav Kudale</h1>
-                    <h3>
-                        Also known as <span>blaze</span>. I'm a Canada-based <span>developer</span>, <span>student</span>, and <span>tehnology enthusiast</span> creating impactful Java and Python-based projects for different groups. Let's
-                        <a class="smoothscroll" href="#about">start scrolling</a>
-                        and learn more
-                        <a class="smoothscroll" href="#about">about me</a>.
-                    </h3>
-                    <hr />
-                    <ul class="social">
-                        <li>
-                            <a href="https://twitter.com/cblaze1111"><i class="fa-brands fa-square-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/arnnav-kudale-934b85285/"><i class="fa-brands fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/blaze.arnnavk/"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <p class="scrolldown">
-                <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-            </p>
+<head>
+<meta charset="utf-8" />
+<title>Arnnav Kudale — Mechanical &amp; Electrical Engineering</title>
+<meta name="description" content="Arnnav Kudale — building things that move. Mechanical and electrical engineering portfolio. Oakville, Ontario." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --bg:        #0f0e0c;
+  --bg-1:      #16140f;
+  --bg-2:      #1c1914;
+  --line:      #29251e;
+  --line-2:    #3a3428;
+  --fg:        #ece6d6;
+  --fg-1:      #a8a293;
+  --fg-2:      #6e6a5d;
+  --accent:    #ff7a3d;
+  --sans:      'Geist', -apple-system, system-ui, sans-serif;
+  --mono:      'JetBrains Mono', ui-monospace, monospace;
+  --maxw:      1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:var(--accent);color:var(--bg)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+@media (max-width:680px){.wrap{padding:0 22px}}
+
+/* ──────────────────  nav */
+nav.top{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  background:linear-gradient(to bottom, rgba(15,14,12,.94), rgba(15,14,12,.7));
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+nav.top .inner{max-width:var(--maxw);margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between}
+nav.top .brand{
+  font:500 14px/1 var(--mono);letter-spacing:.04em;color:var(--fg);
+  display:flex;align-items:center;gap:10px;
+}
+nav.top .brand .sq{width:9px;height:9px;background:var(--accent);display:inline-block}
+nav.top ul{display:flex;gap:22px;list-style:none}
+nav.top ul a{
+  font:500 12px/1 var(--mono);letter-spacing:.06em;color:var(--fg-1);text-transform:uppercase;
+  padding-bottom:3px;position:relative;transition:color .2s;
+}
+nav.top ul a:hover{color:var(--fg)}
+nav.top ul a.active{color:var(--fg)}
+nav.top ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--accent)}
+@media (max-width:680px){
+  nav.top ul{gap:14px}
+  nav.top ul a{font-size:11px;letter-spacing:.04em}
+  nav.top .inner{padding:14px 22px}
+  nav.top .brand{font-size:12px}
+}
+
+/* ──────────────────  hero */
+.hero{padding:160px 0 120px;border-bottom:1px solid var(--line)}
+.hero .greeting{
+  font:500 12px/1 var(--mono);color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:32px;
+  display:inline-flex;align-items:center;gap:10px;
+}
+.hero .greeting::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 10px #3ddc84;
+  animation:pulse 2.6s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{
+  font-weight:500;font-size:clamp(54px,8vw,98px);line-height:1;letter-spacing:-.035em;color:var(--fg);
+}
+.hero h1 .accent{color:var(--accent)}
+.hero .name{
+  font:500 13px/1 var(--mono);color:var(--fg-2);letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px;
+}
+.hero .lede{
+  margin-top:36px;max-width:600px;
+  font-size:19px;line-height:1.6;color:var(--fg-1);
+}
+.hero .hero-meta{
+  margin-top:64px;padding-top:24px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+}
+.hero-meta dl dt{font:500 11px/1 var(--mono);color:var(--fg-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.hero-meta dl dd{font-size:14.5px;color:var(--fg);font-weight:500}
+@media (max-width:680px){
+  .hero{padding:130px 0 80px}
+  .hero .hero-meta{grid-template-columns:1fr 1fr;gap:18px}
+}
+
+/* ──────────────────  sections */
+section{padding:110px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:none}
+
+.sec-head{margin-bottom:64px}
+.sec-head .label{
+  font:500 11px/1 var(--mono);color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-head .label::before{content:"";width:18px;height:1px;background:var(--accent)}
+.sec-head h2{
+  font-weight:500;font-size:clamp(32px,4.6vw,52px);line-height:1.05;letter-spacing:-.025em;
+  max-width:760px;
+}
+.sec-head .sub{color:var(--fg-1);font-size:17px;max-width:640px;margin-top:14px;line-height:1.6}
+
+/* ──────────────────  about */
+.about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+.about-port .frame{
+  width:100%;aspect-ratio:4/5;border-radius:3px;background:var(--bg-1);overflow:hidden;
+  border:1px solid var(--line);
+}
+.about-port .frame > image-slot, .about-port .frame > img{
+  width:100%;height:100%;display:block;object-fit:cover;
+  filter:grayscale(.25) contrast(1.02);
+}
+.about-port .cap{
+  margin-top:14px;font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;
+  display:flex;justify-content:space-between;
+}
+.about-port .cap b{color:var(--fg)}
+.about-copy p{color:var(--fg-1);font-size:17.5px;line-height:1.75;margin-bottom:20px}
+.about-copy p:last-child{margin-bottom:0}
+.about-copy strong{color:var(--fg);font-weight:500}
+@media (max-width:780px){
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .about-port{max-width:300px}
+}
+
+/* ──────────────────  projects (the hero of this site) */
+.project{padding:0;border-top:1px solid var(--line)}
+.project:first-of-type{border-top:none}
+.project .body{padding:80px 0}
+
+.project-head{
+  display:grid;grid-template-columns:60px 1fr auto;gap:24px;align-items:baseline;margin-bottom:32px;
+}
+.project-head .num{
+  font:500 13px/1 var(--mono);color:var(--accent);letter-spacing:.04em;
+}
+.project-head h3{
+  font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1;letter-spacing:-.025em;color:var(--fg);
+}
+.project-head .yr{
+  font:500 12px/1 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;justify-self:end;
+}
+
+.project-meta{
+  display:grid;grid-template-columns:60px 1fr;gap:24px;margin-bottom:36px;
+}
+.project-meta .role{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px 32px;
+  font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;
+}
+.project-meta .role dt{margin-bottom:6px;color:var(--fg-2)}
+.project-meta .role dd{color:var(--fg);font-size:13px}
+
+.project-body{display:grid;grid-template-columns:60px 1fr;gap:24px;align-items:start}
+.project-body .copy{display:flex;flex-direction:column;gap:18px}
+.project-body .copy p{font-size:16px;color:var(--fg-1);line-height:1.7;max-width:760px}
+.project-body ul.contrib{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.project-body ul.contrib li{
+  display:grid;grid-template-columns:14px 1fr;gap:14px;font-size:15.5px;color:var(--fg-1);line-height:1.6;
+}
+.project-body ul.contrib li::before{
+  content:"";width:6px;height:6px;background:var(--accent);margin-top:9px;display:block;
+}
+.project-body ul.contrib li b{color:var(--fg);font-weight:500}
+
+@media (max-width:780px){
+  .project-head{grid-template-columns:1fr auto;gap:14px}
+  .project-head .num{grid-column:1 / -1;margin-bottom:-12px}
+  .project-meta, .project-body{grid-template-columns:1fr;gap:14px}
+}
+
+/* specs block (warrig) */
+.specs{
+  margin-top:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:3px;overflow:hidden;
+}
+.specs .cell{background:var(--bg-1);padding:22px 20px}
+.specs .cell .k{font:500 10px/1 var(--mono);color:var(--fg-2);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.specs .cell .v{font-size:28px;font-weight:500;letter-spacing:-.02em;color:var(--fg)}
+.specs .cell .v small{font-size:13px;color:var(--fg-2);font-weight:400;letter-spacing:.02em;margin-left:4px}
+@media (max-width:780px){
+  .specs{grid-template-columns:1fr 1fr}
+}
+
+/* project images */
+.proj-images{margin-top:44px}
+.proj-images.featured{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:14px;
+}
+.proj-images.featured .slot{position:relative;background:var(--bg-1);border:1px solid var(--line);overflow:hidden;border-radius:3px}
+.proj-images.featured .slot.lead{grid-column:span 12;aspect-ratio:21/10}
+.proj-images.featured .slot.side{grid-column:span 6;aspect-ratio:4/3}
+.proj-images.featured .slot image-slot, .proj-images.featured .slot img{width:100%;height:100%;object-fit:cover;display:block}
+.proj-images .cap{
+  margin-top:10px;font:500 10.5px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;
+  display:flex;justify-content:space-between;gap:14px;
+}
+.proj-images .cap b{color:var(--fg-1)}
+
+.proj-images.single{display:grid;grid-template-columns:1fr;gap:14px}
+.proj-images.single .slot{aspect-ratio:16/9;background:var(--bg-1);border:1px solid var(--line);overflow:hidden;border-radius:3px}
+.proj-images.single .slot image-slot, .proj-images.single .slot img{width:100%;height:100%;object-fit:cover}
+
+@media (max-width:780px){
+  .proj-images.featured .slot.side{grid-column:span 12}
+}
+
+/* awards inline (frc) */
+.inline-awards{
+  margin-top:28px;border:1px solid var(--line);border-radius:3px;
+  display:flex;flex-direction:column;
+}
+.inline-awards .row{
+  display:grid;grid-template-columns:140px 1fr;gap:18px;
+  padding:16px 22px;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.inline-awards .row:last-child{border-bottom:none}
+.inline-awards .row .yr{font:500 11px/1 var(--mono);color:var(--accent);letter-spacing:.1em}
+.inline-awards .row .ttl{font-size:14.5px;color:var(--fg)}
+.inline-awards .row .ttl span{color:var(--fg-2);display:block;margin-top:2px;font-size:13px}
+@media (max-width:680px){.inline-awards .row{grid-template-columns:1fr}.inline-awards .row .yr{font-size:10.5px}}
+
+/* ──────────────────  experience */
+.exp-list{display:flex;flex-direction:column}
+.exp-row{
+  display:grid;grid-template-columns:1fr auto;gap:18px;
+  padding:24px 0;border-bottom:1px solid var(--line);align-items:start;
+}
+.exp-row:first-child{border-top:1px solid var(--line)}
+.exp-row h4{font-size:19px;font-weight:500;letter-spacing:-.01em}
+.exp-row .role{font:500 11px/1 var(--mono);color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
+.exp-row .when{font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.1em;text-transform:uppercase;text-align:right;white-space:nowrap}
+.exp-row ul{
+  grid-column:1 / -1;list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:14px;
+}
+.exp-row ul li{
+  display:grid;grid-template-columns:14px 1fr;gap:12px;font-size:14.5px;color:var(--fg-1);line-height:1.55;
+}
+.exp-row ul li::before{content:"";width:5px;height:1px;background:var(--fg-2);margin-top:11px;display:block}
+@media (max-width:680px){.exp-row .when{font-size:10.5px}}
+
+/* ──────────────────  skills */
+.skills-grid{display:grid;grid-template-columns:1fr 2fr;gap:32px;border:1px solid var(--line);border-radius:3px;padding:32px}
+.skills-grid h4{font:500 11px/1 var(--mono);color:var(--accent);letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.skills-grid > div > p{font-size:14.5px;color:var(--fg-1);line-height:1.6}
+.skills-cats{display:flex;flex-direction:column;gap:22px}
+.skills-cats .cat{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.skills-cats .cat:last-child{border-bottom:none;padding-bottom:0}
+.skills-cats .cat h5{font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase}
+.skills-cats .cat .list{font-size:14.5px;color:var(--fg);line-height:1.65}
+@media (max-width:780px){
+  .skills-grid{grid-template-columns:1fr;padding:24px}
+  .skills-cats .cat{grid-template-columns:1fr;gap:6px}
+}
+
+/* ──────────────────  contact */
+.contact{padding-bottom:60px}
+.contact h2{font-size:clamp(40px,6vw,72px);line-height:1.05;letter-spacing:-.025em;margin-bottom:24px;font-weight:500}
+.contact h2 .accent{color:var(--accent)}
+.contact .lede-c{color:var(--fg-1);font-size:18px;max-width:560px;margin-bottom:40px}
+.contact .channels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.contact .channels a{
+  display:flex;flex-direction:column;gap:8px;padding:22px 24px;border:1px solid var(--line);border-radius:3px;background:var(--bg-1);
+  transition:border-color .25s, transform .25s, background .25s;
+}
+.contact .channels a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.contact .channels .lbl{font:500 10px/1 var(--mono);color:var(--fg-2);letter-spacing:.18em;text-transform:uppercase}
+.contact .channels .val{font-size:17px;color:var(--fg);font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.contact .channels .val .arr{color:var(--accent);transition:transform .25s}
+.contact .channels a:hover .val .arr{transform:translate(3px,-3px)}
+@media (max-width:780px){.contact .channels{grid-template-columns:1fr}}
+
+footer{padding:32px 0 40px;border-top:1px solid var(--line);font:500 11px/1.5 var(--mono);color:var(--fg-2);letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* image-slot styling overrides — keep tones consistent */
+image-slot{
+  --slot-bg: var(--bg-2);
+  --slot-fg: var(--fg-2);
+  --slot-border: var(--line);
+}
+
+/* ──────────────────  glossary tooltips */
+.term{
+  border-bottom:1px dashed rgba(255,122,61,.45);
+  cursor:help;transition:border-color .2s, color .2s;
+}
+.term:hover{border-bottom-color:var(--accent);color:var(--fg)}
+#tooltip{
+  position:fixed;z-index:80;max-width:280px;
+  background:#1c1914;border:1px solid var(--line-2);color:var(--fg);
+  font:400 13.5px/1.55 var(--sans);letter-spacing:.005em;
+  padding:11px 14px;border-radius:5px;
+  box-shadow:0 14px 38px rgba(0,0,0,.55), 0 0 0 1px rgba(255,122,61,.06);
+  pointer-events:none;opacity:0;transform:translateY(-4px);
+  transition:opacity .14s ease, transform .14s ease;
+}
+#tooltip.in{opacity:1;transform:translateY(0)}
+#tooltip .head{
+  font:500 10px/1 var(--mono);color:var(--accent);letter-spacing:.16em;text-transform:uppercase;
+  margin-bottom:6px;display:flex;align-items:center;gap:8px;
+}
+#tooltip .head::before{content:"";width:10px;height:1px;background:var(--accent)}
+#tooltip .body{color:var(--fg-1)}
+
+/* ──────────────────  scroll gallery */
+.gallery{position:relative;margin-top:44px}
+.gallery .track{
+  display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  padding-bottom:12px;
+  scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;
+}
+.gallery .track::-webkit-scrollbar{height:6px}
+.gallery .track::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:3px}
+.gallery .track::-webkit-scrollbar-track{background:transparent}
+.gallery .item{flex:0 0 calc(72% - 6px);scroll-snap-align:start;min-width:280px}
+.gallery .slot{
+  aspect-ratio:16/10;border:1px solid var(--line);background:var(--bg-1);overflow:hidden;border-radius:3px;
+}
+.gallery .slot > image-slot, .gallery .slot > img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery .item .cap{
+  margin-top:10px;display:flex;justify-content:space-between;gap:14px;
+  font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;
+}
+.gallery .item .cap b{color:var(--fg);font-weight:500}
+.gallery .nav-btns{
+  margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.gallery .nav-btns .meta{font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.14em;text-transform:uppercase}
+.gallery .nav-btns .btns{display:flex;gap:8px}
+.gallery .nav-btn{
+  width:38px;height:38px;border:1px solid var(--line-2);border-radius:50%;background:var(--bg-1);
+  display:grid;place-items:center;color:var(--fg-1);cursor:pointer;font-size:15px;
+  transition:border-color .2s, color .2s, background .2s;
+}
+.gallery .nav-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--bg-2)}
+.gallery .nav-btn[disabled]{opacity:.4;cursor:not-allowed;border-color:var(--line)}
+@media (max-width:680px){.gallery .item{flex-basis:88%}}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="inner">
+    <a href="#home" class="brand"><span class="sq"></span>Arnnav Kudale</a>
+    <ul>
+      <li><a href="#about"      data-target="about">About</a></li>
+      <li><a href="#projects"   data-target="projects">Projects</a></li>
+      <li><a href="#experience" data-target="experience">Experience</a></li>
+      <li><a href="#contact"    data-target="contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" id="home" data-screen-label="01 Hero">
+    <div class="greeting">Available for engineering internships</div>
+    <div class="name">Arnnav Kudale · Oakville, Ontario</div>
+    <h1>Building things<br/>that <span class="accent">move</span>.</h1>
+    <p class="lede">
+      Mechanical and electrical engineering work — competition race cars, FRC robots, autonomous drones. Currently in my final years of high school, looking for opportunities to keep making things.
+    </p>
+    <div class="hero-meta">
+      <dl><dt>Discipline</dt><dd>Mechanical · Electrical</dd></dl>
+      <dl><dt>Currently</dt><dd>Lead, Warrig X2</dd></dl>
+      <dl><dt>Toolkit</dt><dd>CAD · Machining · Wiring</dd></dl>
+      <dl><dt>Status</dt><dd>Open to internships</dd></dl>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" data-screen-label="02 About">
+    <div class="sec-head reveal">
+      <div class="label">About</div>
+      <h2>Working at the seams between mechanical and electrical — where a decision in one discipline tends to break something in the other.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-port reveal">
+        <div class="frame">
+          <image-slot id="portrait" src="assets/pfp.png" placeholder="Drop a portrait photo"></image-slot>
+        </div>
+        <div class="cap"><span>Subject · <b>A. Kudale</b></span><span>01 / 01</span></div>
+      </div>
+      <div class="about-copy reveal">
+        <p>I build things. Most of my time goes into hands-on engineering — designing and machining parts for a competition electric race car, leading electrical on an FRC robot, and iterating drone hardware through three full hardware cycles. I was the first student on my FRC team certified on the <strong class="term" data-tip-label="Hardware" data-tip="3-axis production CNC mill from Tormach. Toolchanger-capable, rigid enough for production work in steel and aluminum.">Tormach 1100MX CNC mill</strong>, and I spent a summer at <strong class="term" data-tip-label="Organisation" data-tip="Defence Research and Development Organisation — India's premier defence R&amp;D agency.">DRDO</strong> developing autonomous drone software with <strong class="term" data-tip-label="Software" data-tip="Robot Operating System 2 — open-source robotics middleware for sensors, control, and inter-process messaging.">ROS2</strong>.</p>
+        <p>I work across mechanical and electrical, which means I spend a lot of time at the intersection where a design decision in one discipline breaks something in the other. That's the part I find most interesting.</p>
+        <p>Outside of build season I organize hackathons, mentor <strong class="term" data-tip-label="Program" data-tip="FIRST LEGO League — robotics competition for ages 9–16 using LEGO Education kits.">FLL</strong> teams, and hold a <strong class="term" data-tip-label="Rank" data-tip="A senior Royal Canadian Sea Cadet rank. Responsible for training, leading, and mentoring junior cadets.">Training Petty Officer</strong> role in the Royal Canadian Sea Cadets, where I've placed top in my phase four consecutive years.</p>
+        <p>Currently in my final years of high school in Oakville, Ontario. Looking for opportunities in mechanical or electrical engineering where I can keep making things.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" data-screen-label="03 Projects" style="padding-bottom:0">
+    <div class="sec-head reveal">
+      <div class="label">Selected projects</div>
+      <h2>Six projects — what I made, how I made it, what broke first.</h2>
+      <p class="sub">Each project is the result of hands-on iteration across mechanical and electrical disciplines. Where it matters, photos and CAD renders.</p>
+    </div>
+
+    <!-- 01 · WARRIG X2 ──────────────────────────────── -->
+    <article class="project reveal">
+      <div class="body">
+        <header class="project-head">
+          <span class="num">01</span>
+          <h3>Warrig X2 · Electrathon Race Car</h3>
+          <span class="yr">2025 — Present</span>
         </header>
-        <!-- About Section -->
-        <section id="about">
-            <div class="row">
-                <div class="three columns">
-                    <img class="profile-pic" src="images/blaze.png" alt="Arnnav Kudale" />
-                </div>
-                <div class="nine columns main-col">
-                    <h2>About Me</h2>
-                    <p>
-                        I'm Arnnav Kudale, a 17-year-old Grade 11 student and developer based in Oakville, Ontario, Canada. I organize and support
-                        hackathons (including <a href="https://jamhacks.ca/" target="_blank" rel="noopener"><span>JamHacks 9</span></a>),
-                        and I am an active member of <a href="https://1360.ca" target="_blank" rel="noopener">FRC 1360 Orbit Robotics</a>.
-                        I’m passionate about 3D printing, drone technology, and system administration.
-                        </p>
-                    <div class="row">
-                        <div class="columns contact-details">
-                            <h2>Contact Details</h2>
-                            <p class="address">
-                                <span>Discord: ablaze3dp</span><br/>
-                                <span>Email: <a href="mailto:arnnav0kudale@gmail.com">arnnav0kudale@gmail.com</a></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <div class="project-meta">
+          <span></span>
+          <dl class="role">
+            <div><dt>Role</dt><dd>Mechanical &amp; Electrical Lead</dd></div>
+            <div><dt>Team</dt><dd>White Oaks Electrathon</dd></div>
+            <div><dt>Series</dt><dd>Electrathon Canada</dd></div>
+            <div><dt>Vehicle</dt><dd>Single-seat electric</dd></div>
+          </dl>
+        </div>
+
+        <div class="project-body">
+          <span></span>
+          <div class="copy">
+            <p>Single-seat electric race car competing in the Electrathon Canada series. I lead mechanical and electrical — the rear drivetrain redesign was the focal point of the 2025 season.</p>
+            <ul class="contrib">
+              <li><span><b>Replaced</b> a failing brushed single-motor system with <b class="term" data-tip-label="Hardware" data-tip="High-output brushless motor from WCP/CTRE. Common in FRC drivetrains; supports CAN telemetry and per-motor current limits.">three Kraken X60</b> brushless motors sharing a West Coast Products gearbox at an <b class="term" data-tip-label="Gearing" data-tip="Combined gear reduction across two stages: 12:60 internal gear pair, then 24:55 chain stage. Trades top speed for torque and thermal margin.">11.46:1 total reduction</b> (12:60 internal stage, 24:55 chain stage).</span></li>
+              <li><span><b>Designed the motor-mount bracket</b> through a full iteration cycle — started with a 3D-printed PLA prototype that exposed a structural failure mode in the bolt pattern, then redesigned and had the final version machined from aluminum.</span></li>
+              <li><span><b>Owned</b> <span class="term" data-tip-label="Protocol" data-tip="Controller Area Network — a robust serial bus standard used in vehicles and robots for low-latency device-to-device messaging.">CAN bus</span> layout, breaker sizing (<b class="term" data-tip-label="Component" data-tip="Bussmann's HI-AMP series — a heavy-duty automotive-grade resettable circuit breaker, sized to protect the main power bus.">120A Bussmann HI-AMP</b>), and per-motor current limiting via <span class="term" data-tip-label="Component" data-tip="CTRE's brushless motor controller for the Falcon / Kraken family. Streams motor current, temperature, and position over CAN.">Talon FX</span> telemetry.</span></li>
+              <li><span><b>Authored</b> the full Engineering Design Report submitted to competition.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="specs">
+          <div class="cell"><div class="k">Motors</div><div class="v">3<small>× Kraken X60</small></div></div>
+          <div class="cell"><div class="k">Reduction</div><div class="v">11.46<small>:1</small></div></div>
+          <div class="cell"><div class="k">Breaker</div><div class="v">120<small>A Bussmann</small></div></div>
+          <div class="cell"><div class="k">Control</div><div class="v">CAN<small>+ Talon FX</small></div></div>
+        </div>
+
+        <div class="gallery" data-gallery>
+          <div class="track">
+            <div class="item">
+              <div class="slot"><image-slot id="warrig-cad" src="assets/warrig_cad.png" placeholder="Drop CAD render — three-motor gearbox assembly"></image-slot></div>
+              <div class="cap"><span>Fig. <b>1.1</b></span><span>CAD · gearbox assembly</span></div>
             </div>
-        </section>
-        <!-- Resume Section -->
-        <section id="resume">
-            <!-- Education -->
-            <div class="row education">
-                <div class="three columns header-col">
-                    <h1><span>Education</span></h1>
-                </div>
-                <div class="nine columns main-col">
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>White Oaks Secondary School</h3>
-                            <p class="info">
-                                Grades 9-12 <span>&bull;</span>
-                                <em class="date">September 6, 2023 - Current</em>
-                            </p>
-                            <p>
-                                Grade 11 student. Team Captain (Executive) of <strong>WOSS Robotics</strong>; former executive of the Computer Science Club; member of the VEX Senior Team and the Electrathon Team. Previously part of the Intermediate Band.                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Dr. David R. Williams</h3>
-                            <p class="info">
-                                Grades 7-8 <span>&bull;</span>
-                                <em class="date">September 7, 2021 - June 30, 2023</em>
-                            </p>
-                            <p>
-                                I was a student at Dr. David R. Williams PS for grades 7 and 8. I graduated in June 2023 with the ETFO Math and Science award.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="item">
+              <div class="slot"><image-slot id="warrig-gearbox" src="assets/warrig_gearbox.png" placeholder="Drop photo — physical gearbox hardware"></image-slot></div>
+              <div class="cap"><span>Fig. <b>1.2</b></span><span>Physical gearbox</span></div>
             </div>
-            <!-- Achievements and Awards -->
-            <div class="row education">
-                <div class="three columns header-col">
-                    <h1><span>Achievements and Awards</span></h1>
-                </div>
-                <div class="nine columns main-col">
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Silver Merit Award - BASEF 2026</h3>
-                            <p class="info">Bay Area Science and Engineering Fair</p>
-                            <p>
-                                Silver Merit for autonomous drone-based computer vision system to classify vegetation fuel types and generate flammability heatmaps for wildfire risk assessment.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Dillon Consulting Science and Engineering Award - BASEF 2026</h3>
-                            <p class="info">Bay Area Science and Engineering Fair</p>
-                            <p>
-                                Dillon Consulting Award for applied science and engineering for autonomous drone-based vegetation classification and wildfire risk assessment.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Ingenious+ Regional Winner - April 2025</h3>
-                            <p class="info">Ingenious+ Canada</p>
-                            <p>
-                                Won as an Ingenious+ Regional Winner in April 2025 for TensorForest, a project focused on using drones and AI-driven analysis to identify forest fire risk zones from aerial imagery. Learn more: <a href="https://ingeniousplus.ca/submission/tensorforest/" target="_blank" rel="noopener">TensorForest submission</a>.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Oakville Youth Climate Action Fund - 2025</h3>
-                            <p class="info">Town of Oakville</p>
-                            <p>
-                                Awarded the Oakville Youth Climate Action Fund for leading AirSense, a project focused on building and deploying low-cost air quality sensors across Oakville. Designed to monitor pollutants like PM2.5, CO₂, and NO₂, the project provides real-time data through a public dashboard to support environmental awareness and action.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Top Phase 4 Cadet - 2024/2025</h3>
-                            <p class="info">RCSCC 178 Oakville</p>
-                            <p>
-                            This award is given to the top cadet in the phase 4 training. It signifies high levels of motivation, enthusiasm, positive attitude, and strong class participation. I was awarded this in 2025.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Oakville Youth Climate Action Fund - 2024</h3>
-                            <p class="info">Town of Oakville</p>
-                            <p>
-                                Awarded the Oakville Youth Climate Action Fund for my project, TensorForest, which uses drones to capture high-resolution forest imagery and assess vegetation flammability. It automates data collection, creating detailed heatmaps to identify high-risk fire areas.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Top Phase 3 Cadet - 2023/2024</h3>
-                            <p class="info">RCSCC 178 Oakville</p>
-                            <p>
-                            This award is given to the top cadet in the phase 3 training. It signifies high levels of motivation, enthusiasm, positive attitude, and strong class participation. I was awarded this in 2024.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>ETFO Math and Science Award - 2022/2023</h3>
-                            <p class="info">HDSB</p>
-                            <p>
-                                Awarded at my Grade 8 graduation in 2023, this recognition honors a student who demonstrates outstanding achievement in Math and Science, consistently showing enthusiasm, active participation, and a commitment to going above and beyond in the classroom.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Best Project Award</h3>
-                            <p class="info">
-                                FIRST Girls and Allies Stemathon 2023 - Team CO3 (Team 9)
-                            </p>
-                            <p>
-                                The Best Project Award recognizes the team that the judges thought came up with the best solution to their chosen problem which addressed the overall 2023 STEMathon challenge. As part of this recognition, I was also awarded a Fitbit Charge 5.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Top Phase 2 Cadet - 2022/2023</h3>
-                            <p class="info">RCSCC 178 Oakville</p>
-                            <p>
-                                This award is given to the top cadet in the phase 2 training, signifying high levels of motivation, enthusiasm, positive attitude, and strong class participation. I received this in 2023.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Top Phase 1 Cadet - 2021/2022</h3>
-                            <p class="info">RCSCC 178 Oakville</p>
-                            <p>
-                                This award is given to the top cadet in the phase 1 training, signifying high levels of motivation, enthusiasm, positive attitude, and strong class participation. I received this in 2022.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>BASEF Bronze Merit - 2023/2024</h3>
-                            <p class="info">BASEF</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="item">
+              <div class="slot"><image-slot id="warrig-bracket" src="assets/warrig_bracket.png" placeholder="Drop photo — motor mount bracket"></image-slot></div>
+              <div class="cap"><span>Fig. <b>1.3</b></span><span>Aluminum motor mount</span></div>
             </div>
-            <!-- Organizations -->
-            <div class="row work">
-                <div class="three columns header-col">
-                    <h1><span>Organizations</span></h1>
-                </div>
-                <div class="nine columns main-col">
-                    <div class="row item">
-                        <div class="twelve columns">
-                        <h3>WOSS Robotics</h3>
-                        <p class="info">Team Captain (Executive) <span>&bull;</span> <em class="date">September 2024 – Current</em></p>
-                        <p>
-                        Lead coordination, task delegation, and mentoring across subteams; drive build-season execution and outreach.
-                        </p>
-                        </div>
-                        </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>1360 Orbit Robotics (1360.ca)</h3>
-                            <p class="info">
-                                Member <span>&bull;</span>
-                                <em class="date">September 2022 - Current</em>
-                            </p>
-                            <p>
-                                Contributed to the robotics programming team using Java, with a focus on automation and control systems. Additionally, I developed an RFID-based attendance system and supported the build subteam.                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>JamHacks 9 (jamhacks.ca)</h3>
-                            <p class="info">
-                                Organizer <span>&bull;</span>
-                                <em class="date">July 2024 - June 2025</em>
-                            </p>
-                            <p>
-                                Built a portion the frontend of the JAMHacks website, focusing on responsive design, event information, and sponsor sections for the 2025 hackathon hosted at the University of Waterloo.
-                            </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>DRDO-AT-DYSL (drdo.gov.in)</h3>
-                            <p class="info">
-                                Intern <span>&bull;</span>
-                                <em class="date">July 2024 - August 2024</em>
-                            </p>
-                            <p>
-                                Gained hands-on experience with autonomous flight systems using the Robot Operating System (ROS). Developed and successfully tested a drone with autonomous capabilities using ROS2 Humble, Ubuntu 22.04, and Python.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Counterspell Ottawa (ragnohacks.ca)</h3>
-                            <p class="info">
-                                Organizer - 3D Printing and Hardware
-                                <span>&bull;</span>
-                                <em class="date">June 2024 - November 2024</em>
-                            </p>
-                            <p>
-                                Counterspell Ottawa is Ottawa's first in-person high school hackathon, bringing together teens from around the world to solve challenges related to natural disasters. As an organizer, I contributed to the 3d printing
-                                and hardware aspect mainly and helped with the initial stages of the website. I was also responsible for drafting professional correspondence to potential sponsors.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>Factful (factful.io)</h3>
-                            <p class="info">
-                                CTO and Developer <span>&bull;</span>
-                                <em class="date">July 2023 - January 2024</em>
-                            </p>
-                            <p>
-                                Developed backend APIs, managing data storage and user authentication systems using Python and Django. Created the first ever working prototype of the fact checker. I transitioned out of the role following a strategic shift in the company’s direction that no longer aligned with my professional interests.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <div class="twelve columns">
-                            <h3>HDSB Student Senate (hdsb.ca)</h3>
-                            <p class="info">
-                                Senator <span>&bull;</span>
-                                <em class="date">October 2022 - June 2023</em>
-                            </p>
-                            <p>
-                                Represented my school as a senator in the HDSB Senate, participating in discussions and decision-making processes regarding student affairs and school policies.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="item">
+              <div class="slot"><image-slot id="warrig-car" src="assets/warrig_car.png" placeholder="Drop photo — the car on track / in pit"></image-slot></div>
+              <div class="cap"><span>Fig. <b>1.4</b></span><span>Vehicle</span></div>
             </div>
-            <!-- Technical Skills -->
-            <div class="row skill">
-                <div class="three columns header-col">
-                    <h1><span>Skills</span></h1>
-                </div>
-                <div class="nine columns main-col">
-                    <div class="skill-cards">
-            
-                        <div class="skill-card">
-                            <h3><i class="fa fa-code"></i> Programming Languages</h2>
-                            <ul>
-                                <li><i class="fa-brands fa-python"></i> Python <span class="level">Advanced</span></li>
-                                <li><i class="fa-brands fa-java"></i> Java <span class="level">Intermediate</span></li>
-                                <li><i class="fa-brands fa-js"></i> JavaScript <span class="level">Advanced</span></li>
-                            </ul>
-                        </div>
-            
-                        <div class="skill-card">
-                            <h3><i class="fa fa-cogs"></i> Tools & Frameworks</h2>
-                            <ul>
-                                <li><i class="fa-brands fa-react"></i> React.js <span class="level">Advanced</span></li>
-                                <li><i class="fa-brands fa-node"></i> Node.js <span class="level">Advanced</span></li>
-                                <li><i class="fa-brands fa-docker"></i> Docker <span class="level">Intermediate</span></li>
-                            </ul>
-                        </div>
-            
-                        <div class="skill-card">
-                            <h3><i class="fa fa-wrench"></i> Technical Skills</h2>
-                            <ul>
-                                <li><i class="fa-brands fa-ubuntu"></i> System Admin (Ubuntu/Debian) <span class="level">Intermediate</span></li>
-                                <li><i class="fa-brands fa-github"></i> Git & Version Control <span class="level">Advanced</span></li>
-                                <li><i class="fa-solid fa-cube"></i> 3D Printing <span class="level">Expert</span></li>
-                            </ul>
-                        </div>
-            
-                    </div>
-                </div>
+          </div>
+          <div class="nav-btns">
+            <span class="meta">Fig. <b style="color:var(--fg-1)">1.1 — 1.4</b> · Drivetrain build · scroll →</span>
+            <div class="btns">
+              <button class="nav-btn prev" aria-label="Previous">←</button>
+              <button class="nav-btn next" aria-label="Next">→</button>
             </div>
-            
-        </section>
-        <!-- Portfolio Section -->
-        <section id="portfolio">
-            <div class="row">
-              <div class="twelve columns collapsed">
-                <h1 class="text-center">Projects I've Built</h1>
-                <p class="lead text-center">A curated showcase of my technical work, combining engineering, design, and innovation.</p>
-          
-                <div class="portfolio-grid">
-          
-                  <div class="portfolio-card">
-                    <div class="portfolio-image-wrapper">
-                    <img src="images/portfolio/hypercube.png" alt="Hypercube Revive" />
-                    </div>
-                    <div class="portfolio-info">
-                      <h3>Hypercube Revive</h3>
-                      <p>Rebuilt the 2017 HyperCube 3D printer for speed and performance. Used Klipper firmware, custom enclosures, and industrial hardware.</p>
-                      <a class="button" href="https://discord.com/channels/167661427862142976/1151917309875728504" target="_blank">View Thread</a>
-                    </div>
-                  </div>
-          
-                  <div class="portfolio-card">
-                    <div class="portfolio-image-wrapper">
-                    <img src="images/portfolio/frc_2024.png" alt="FRC 2024" />
-                    </div>
-                    <div class="portfolio-info">
-                      <h3>FRC 1360 – Apollo (2024)</h3>
-                      <p>Led programming for autonomous robot control and contributed to mechanical design.</p>
-                      <a class="button" href="https://1360.ca" target="_blank">Team Website</a>
-                    </div>
-                  </div>
-          
-                  <div class="portfolio-card">
-                    <div class="portfolio-image-wrapper">
-                    <img src="images/portfolio/frc_2023.jpg" alt="FRC 2023" />
-                    </div>
-                    <div class="portfolio-info">
-                      <h3>FRC 1360 – Armstrong (2023)</h3>
-                      <p>Supported Java programming. Contributed to summer outreach and built an RFID-based attendance system production.</p>
-                      <a class="button" href="https://1360.ca" target="_blank">Team Website</a>
-                    </div>
-                  </div>
-          
-                  <div class="portfolio-card">
-                    <div class="portfolio-image-wrapper">
-                    <img src="images/portfolio/tensorforest.png" alt="TensorForest" />
-                    </div>
-                    <div class="portfolio-info">
-                      <h3>TensorForest</h3>
-                      <p>Drone-based wildfire mapping system that generates heatmaps from high-resolution imagery to detect flammable vegetation zones.</p>
-                      <a class="button" href="https://docs.google.com/document/d/1v3bA5fNaukXWuISGC8W7PLlMZAQRv3yj9H5bLOerzcI/edit" target="_blank">Report</a>
-                    </div>
-                  </div>
-          
-                  <div class="portfolio-card">
-                    <div class="portfolio-image-wrapper">
-                    <img src="images/portfolio/fpv.jpg" alt="FPV Drone" />
-                    </div>
-                    <div class="portfolio-info">
-                      <h3>5in FPV Drone</h3>
-                      <p>Built a freestyle drone from scratch featuring 4S battery, 4k camera, and SpeedyBee stack. Designed for acrobatic flight and aerial video.</p>
-                      <div></div>
-                    </div>
-                  </div>
-          
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 02 · FRC 1360 ──────────────────────────────── -->
+    <article class="project reveal">
+      <div class="body">
+        <header class="project-head">
+          <span class="num">02</span>
+          <h3>FRC 1360 · Orbit Robotics</h3>
+          <span class="yr">2023 — Present</span>
+        </header>
+        <div class="project-meta">
+          <span></span>
+          <dl class="role">
+            <div><dt>Role</dt><dd>Build &amp; Design Member</dd></div>
+            <div><dt>Discipline</dt><dd>Electrical · CNC · Software</dd></div>
+            <div><dt>Seasons</dt><dd>2023 · 2024 · 2025 · 2026</dd></div>
+            <div><dt>Cert.</dt><dd>Tormach 1100MX CNC (first student)</dd></div>
+          </dl>
+        </div>
+
+        <div class="project-body">
+          <span></span>
+          <div class="copy">
+            <ul class="contrib">
+              <li><span><b>Led electrical</b> system design and wiring for the 2026 competition robot.</span></li>
+              <li><span>First student on the team certified on the <b class="term" data-tip-label="Hardware" data-tip="3-axis production CNC mill from Tormach. Toolchanger-capable, rigid enough for production work in steel and aluminum.">Tormach 1100MX CNC mill</b> and CNC router; trained on all shop machines.</span></li>
+              <li><span><b>Programmed three competition robots</b> (2023, 2024, 2025) in Java; led a 10-person programming team for the 2024 robot.</span></li>
+            </ul>
+            <div class="inline-awards">
+              <div class="row"><span class="yr">2026 · Ontario DCMP</span><div class="ttl"><span class="term" data-tip-label="FIRST Award" data-tip="FIRST Engineering Inspiration Award — recognizes a team's outstanding success in advancing respect and appreciation for engineering in their school and community.">Engineering Inspiration Award</span></div></div>
+              <div class="row"><span class="yr">2026 · Niagara College</span><div class="ttl"><span class="term" data-tip-label="FIRST Award" data-tip="FIRST Engineering Inspiration Award — recognizes a team's outstanding success in advancing respect and appreciation for engineering in their school and community.">Engineering Inspiration Award</span><span>Finalists</span></div></div>
+              <div class="row"><span class="yr">2026 · Humber Polytechnic</span><div class="ttl"><span class="term" data-tip-label="FIRST Award" data-tip="FIRST's most prestigious team honour. Recognizes the team that best represents a model for other teams to emulate and impacts their community.">FIRST Impact Award</span></div></div>
             </div>
-          </section>
-          
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="row section-head">
-                <div class="two columns header-col">
-                    <h1><span>Get In Touch.</span></h1>
-                </div>
-                <div class="ten columns">
-                    <p class="lead">
-                        Feel free to reach out for collaborations or just a friendly chat!
-                    </p>
-                </div>
+          </div>
+        </div>
+
+        <div class="gallery" data-gallery>
+          <div class="track">
+            <div class="item">
+              <div class="slot"><image-slot id="frc-2026" src="assets/frc_2026.JPG" placeholder="Drop 2026 robot photo"></image-slot></div>
+              <div class="cap"><span>Season <b>2026</b></span><span>current</span></div>
             </div>
-            <div class="row">
-                <div class="eight columns">
-                    <form id="contactForm">
-                        <fieldset>
-                            <div>
-                                <label for="contactName">Name <span class="required">*</span></label>
-                                <input type="text" size="35" id="contactName" name="contactName" required />
-                            </div>
-                            <div>
-                                <label for="contactSubject">Subject</label>
-                                <input type="text" size="35" id="contactSubject" name="contactSubject" />
-                            </div>
-                            <div>
-                                <label for="contactMessage">Message <span class="required">*</span></label>
-                                <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" required></textarea>
-                            </div>
-                            <div>
-                                <button class="submit" type="submit">
-                                    Submit
-                                </button>
-                                <span id="image-loader">
-                                    <img alt="" src="images/loader.gif" />
-                                </span>
-                            </div>
-                        </fieldset>
-                    </form>
-                    <!-- contact-warning -->
-                    <div id="message-warning">Error boy</div>
-                    <!-- contact-success -->
-                    <div id="message-success"><i class="fa fa-check"></i>Your message was sent, thank you!<br /></div>
-                </div>
-                <aside class="four columns footer-widgets">
-                    <div class="widget widget_contact">
-                        <h4>Contact Info</h4>
-                        <p class="address">
-                            <span>Arnnav Kudale</span><br />
-                            Oakville, Ontario, Canada<br />
-                            <span>Email: <a href="mailto:arnnav0kudale@gmail.com">arnnav0kudale@gmail.com</a></span>
-                        </p>
-                    </div>
-                </aside>
+            <div class="item">
+              <div class="slot"><image-slot id="frc-2025" src="assets/frc_2025.jpg" placeholder="Drop 2025 robot photo"></image-slot></div>
+              <div class="cap"><span>Season <b>2025</b></span><span>Reefscape</span></div>
             </div>
-        </section>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="twelve columns">
-                    <ul class="social-links">
-                        <li>
-                            <a href="https://twitter.com/Cblaze1111"><i class="fa-brands fa-square-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/arnnav-kudale-934b85285/"><i class="fa-brands fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/blaze.arnnavk/"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; 2022 - 2025 Arnnav Kudale</li>
-                    </ul>
-                </div>
+            <div class="item">
+              <div class="slot"><image-slot id="frc-2024" src="assets/frc_2024.png" placeholder="Drop 2024 robot photo"></image-slot></div>
+              <div class="cap"><span>Season <b>2024</b></span><span>Apollo</span></div>
             </div>
-            <div id="go-top">
-                <a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+            <div class="item">
+              <div class="slot"><image-slot id="frc-2023" src="assets/frc_2023.jpg" placeholder="Drop 2023 robot photo"></image-slot></div>
+              <div class="cap"><span>Season <b>2023</b></span><span>Armstrong</span></div>
             </div>
-        </footer>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.flexslider.js"></script>
-        <script src="js/waypoints.js"></script>
-        <script src="js/jquery.fittext.js"></script>
-        <script src="js/magnific-popup.js"></script>
-        <script src="js/doubletaptogo.js"></script>
-        <script src="js/spin.js"></script>
-        <script src="js/init.js"></script>
-        <script>
-            document.ready(function () {
-                $(".portfolio-item a").magnificPopup({
-                    type: "inline",
-                    midClick: true,
-                    gallery: {
-                        enabled: true,
-                    },
-                });
-            });
-        </script>
-    </body>
+          </div>
+          <div class="nav-btns">
+            <span class="meta">Fig. <b style="color:var(--fg-1)">2.1 — 2.4</b> · Robots, newest first · scroll →</span>
+            <div class="btns">
+              <button class="nav-btn prev" aria-label="Previous">←</button>
+              <button class="nav-btn next" aria-label="Next">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 · TENSORFOREST ──────────────────────────────── -->
+    <article class="project reveal">
+      <div class="body">
+        <header class="project-head">
+          <span class="num">03</span>
+          <h3>TensorForest</h3>
+          <span class="yr">2024 — Present</span>
+        </header>
+        <div class="project-meta">
+          <span></span>
+          <dl class="role">
+            <div><dt>Role</dt><dd>Founder &amp; Lead Hardware Engineer</dd></div>
+            <div><dt>Domain</dt><dd>Wildfire risk · Aerial CV</dd></div>
+            <div><dt>Iterations</dt><dd>v1 · v2 · v3 hardware</dd></div>
+            <div><dt>Recognition</dt><dd>Ingenious+ · BASEF</dd></div>
+          </dl>
+        </div>
+
+        <div class="project-body">
+          <span></span>
+          <div class="copy">
+            <ul class="contrib">
+              <li><span><b>Founded</b> the project; designed and built three drone hardware iterations (v1, v2, v3) — each cycle refined the frame, power system, and avionics.</span></li>
+              <li><span>Created flight plans and <b>executed autonomous survey flights</b> over forested areas to capture training and inference data.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="gallery" data-gallery>
+          <div class="track">
+            <div class="item">
+              <div class="slot"><image-slot id="tf-v3" src="assets/tf_v3.png" placeholder="Drop v3 hardware photo"></image-slot></div>
+              <div class="cap"><span>Iteration <b>v3</b></span><span>current platform</span></div>
+            </div>
+            <div class="item">
+              <div class="slot"><image-slot id="tf-v2" src="assets/tf_v2.png" placeholder="Drop v2 hardware photo"></image-slot></div>
+              <div class="cap"><span>Iteration <b>v2</b></span><span>frame + power revision</span></div>
+            </div>
+            <div class="item">
+              <div class="slot"><image-slot id="tf-v1" src="assets/tf_v1.png" placeholder="Drop v1 hardware photo"></image-slot></div>
+              <div class="cap"><span>Iteration <b>v1</b></span><span>first build</span></div>
+            </div>
+            <div class="item">
+              <div class="slot"><image-slot id="tf-survey" src="assets/tf_heatmap.png" placeholder="Drop aerial survey image / heatmap"></image-slot></div>
+              <div class="cap"><span>Survey <b>output</b></span><span>flammability risk heatmap</span></div>
+            </div>
+          </div>
+          <div class="nav-btns">
+            <span class="meta">Fig. <b style="color:var(--fg-1)">3.1 — 3.4</b> · Hardware iterations, newest first · scroll →</span>
+            <div class="btns">
+              <button class="nav-btn prev" aria-label="Previous">←</button>
+              <button class="nav-btn next" aria-label="Next">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04 · DRDO ──────────────────────────────── -->
+    <article class="project reveal">
+      <div class="body">
+        <header class="project-head">
+          <span class="num">04</span>
+          <h3>DRDO · Autonomous Drone Internship</h3>
+          <span class="yr">Jul — Aug 2024</span>
+        </header>
+        <div class="project-meta">
+          <span></span>
+          <dl class="role">
+            <div><dt>Role</dt><dd>Intern</dd></div>
+            <div><dt>Lab</dt><dd><span class="term" data-tip-label="Organisation" data-tip="Defence Research and Development Organisation — India's defence R&amp;D agency. The DYSL focuses on autonomous and drone systems.">DRDO</span> · India</dd></div>
+            <div><dt>Stack</dt><dd><span class="term" data-tip-label="Software" data-tip="Robot Operating System 2 — open-source robotics middleware for sensors, control, and inter-process messaging.">ROS2</span> · <span class="term" data-tip-label="Library" data-tip="Python API for controlling MAVLink-based autopilots from a companion computer or ground station.">DroneKit</span> · Python</dd></div>
+            <div><dt>Mode</dt><dd>On-site</dd></div>
+          </dl>
+        </div>
+
+        <div class="project-body">
+          <span></span>
+          <div class="copy">
+            <ul class="contrib">
+              <li><span><b>Developed autonomous drone software</b> using ROS2 and DroneKit during an on-site summer internship at India's Defence Research and Development Laboratory.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 05 · OAKVILLE CENTRE FOR VISION ──────────────────────────────── -->
+    <article class="project reveal">
+      <div class="body">
+        <header class="project-head">
+          <span class="num">05</span>
+          <h3>Oakville Centre for Vision</h3>
+          <span class="yr">Mar 2026 — Present</span>
+        </header>
+        <div class="project-meta">
+          <span></span>
+          <dl class="role">
+            <div><dt>Role</dt><dd>Software / Hardware Designer</dd></div>
+            <div><dt>Domain</dt><dd>Optometry diagnostics</dd></div>
+            <div><dt>Detail</dt><dd>NDA — details limited</dd></div>
+            <div><dt>Scope</dt><dd>Mount + system integration</dd></div>
+          </dl>
+        </div>
+
+        <div class="project-body">
+          <span></span>
+          <div class="copy">
+            <ul class="contrib">
+              <li><span><b>Designed and prototyped</b> a hardware mount for optometry diagnostic equipment.</span></li>
+              <li><span><b>Contributed</b> to software design supporting system integration.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 06 · HACK CLUB ──────────────────────────────── -->
+    <article class="project reveal" style="border-bottom:1px solid var(--line)">
+      <div class="body">
+        <header class="project-head">
+          <span class="num">06</span>
+          <h3>Hack Club</h3>
+          <span class="yr">2024 — Present</span>
+        </header>
+        <div class="project-meta">
+          <span></span>
+          <dl class="role">
+            <div><dt>Role</dt><dd>Contributor · Forge Lead · Construct Reviewer</dd></div>
+            <div><dt>Programs</dt><dd>Forge · Printing Legion · Construct</dd></div>
+            <div><dt>Hackathons</dt><dd>Counterspell Ottawa + Toronto · 194 attendees</dd></div>
+            <div><dt>OSS</dt><dd>OnBoard · Blot</dd></div>
+          </dl>
+        </div>
+
+        <div class="project-body">
+          <span></span>
+          <div class="copy">
+            <ul class="contrib">
+              <li><span><b>Forge Lead</b> — led hardware build sessions for members across the community.</span></li>
+              <li><span><b>Printing Legion Printer</b> — fulfilled hardware print requests for projects globally.</span></li>
+              <li><span><b>Construct Reviewer</b> — evaluated member hardware grant applications.</span></li>
+              <li><span>Organized <b>Counterspell Ottawa</b> (104 attendees) and <b>Counterspell Toronto</b> (90 attendees) — two in-person high-school hackathons totaling <b>194 attendees</b> across Ontario.</span></li>
+              <li><span>Contributor and reviewer for the OnBoard and Blot open-source projects.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" data-screen-label="04 Experience">
+    <div class="sec-head reveal">
+      <div class="label">Experience</div>
+      <h2>Where I've worked, built, and competed.</h2>
+    </div>
+
+    <div class="exp-list">
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>White Oaks Electrathon</h4>
+          <div class="role">Mechanical &amp; Electrical Lead</div>
+        </div>
+        <div class="when">Sept 2025 — Present</div>
+        <ul>
+          <li>Redesigned rear drivetrain from a failing brushed system to a three-motor brushless setup (Kraken X60, 11.46:1 reduction).</li>
+          <li>Designed and iterated motor-mount bracket from 3D-printed prototype to machined aluminum.</li>
+          <li>Owned CAN bus layout, breaker sizing, and per-motor current limiting via Talon FX telemetry.</li>
+          <li>Authored the team's Engineering Design Report submitted to competition.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>Oakville Centre for Vision</h4>
+          <div class="role">Software / Hardware Designer</div>
+        </div>
+        <div class="when">Mar 2026 — Present</div>
+        <ul>
+          <li>Designed and prototyped a hardware mount for optometry diagnostic equipment.</li>
+          <li>Contributed to software design supporting system integration.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>FIRST Robotics — Team 1360</h4>
+          <div class="role">Build &amp; Design Member</div>
+        </div>
+        <div class="when">Sept 2023 — Present</div>
+        <ul>
+          <li>Engineering Inspiration Award — 2026 Ontario DCMP; 2026 Niagara College (Finalists).</li>
+          <li>FIRST Impact Award — 2026 Humber Polytechnic.</li>
+          <li>First student certified on the Tormach 1100MX CNC mill and CNC router.</li>
+          <li>Led electrical system design and wiring for the 2026 competition robot.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>DRDO</h4>
+          <div class="role">Intern · Defence R&amp;D Laboratory, India</div>
+        </div>
+        <div class="when">Jul — Aug 2024</div>
+        <ul>
+          <li>Developed autonomous drone software using ROS2 and DroneKit.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>TensorForest</h4>
+          <div class="role">Founder &amp; Lead Hardware Engineer</div>
+        </div>
+        <div class="when">May 2024 — Present</div>
+        <ul>
+          <li>Designed and built three drone hardware iterations (v1 — v3).</li>
+          <li>Planned and executed autonomous survey flights over forested areas.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>RCSCC 178 Oakville</h4>
+          <div class="role">Training Petty Officer / Cadet</div>
+        </div>
+        <div class="when">Nov 2021 — Present</div>
+        <ul>
+          <li>Top Phase Cadet four consecutive years (2022 — 2025).</li>
+          <li>HMCS Quadra SBO — Wolf Division 2025.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>White Oaks Robotics Club</h4>
+          <div class="role">VP / Team Captain / Competitor</div>
+        </div>
+        <div class="when">Ongoing</div>
+        <ul>
+          <li>VEX Worlds qualifier 2025.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>Hack Club</h4>
+          <div class="role">Contributor</div>
+        </div>
+        <div class="when">Apr 2024 — Present</div>
+        <ul>
+          <li>Forge Lead, Printing Legion Printer, Construct Reviewer.</li>
+          <li>Contributor and reviewer for OnBoard and Blot open-source projects.</li>
+          <li>Organized Counterspell Ottawa and Counterspell Toronto — two in-person high-school hackathons, 194 attendees combined.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>Hackathons Canada</h4>
+          <div class="role">Logistics</div>
+        </div>
+        <div class="when">Jul 2024 — Mar 2025</div>
+        <ul>
+          <li>Secured sponsorships from 3D printing and PCB manufacturing companies.</li>
+          <li>Designed a power distribution board.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>Halton STEM Club</h4>
+          <div class="role">Student Mentor</div>
+        </div>
+        <div class="when">Sept 2023 — Oct 2024</div>
+        <ul>
+          <li>Mentored an FLL team that qualified for FLL Provincials 2024.</li>
+        </ul>
+      </div>
+
+      <div class="exp-row reveal">
+        <div>
+          <h4>White Oaks DECA</h4>
+          <div class="role">Competitor</div>
+        </div>
+        <div class="when">Sept 2025 — Present</div>
+        <ul>
+          <li>BSM category, qualified for Provincials 2026.</li>
+          <li>Top 15 exam score at Ontario Provincials.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" data-screen-label="05 Skills">
+    <div class="sec-head reveal">
+      <div class="label">Skills</div>
+      <h2>What I reach for.</h2>
+    </div>
+
+    <div class="skills-grid reveal">
+      <div>
+        <h4>Approach</h4>
+        <p>Hardware-forward, iteration-driven. Most projects start in CAD, get a printed prototype to find what breaks, then a machined or wired final pass.</p>
+      </div>
+      <div class="skills-cats">
+        <div class="cat">
+          <h5>Mechanical</h5>
+          <div class="list">CNC machining (Tormach 1100MX, CNC router) · CAD · 3D printing · hardware prototyping</div>
+        </div>
+        <div class="cat">
+          <h5>Electrical</h5>
+          <div class="list">Electrical wiring · CAN bus architecture · power distribution · breaker sizing</div>
+        </div>
+        <div class="cat">
+          <h5>Software</h5>
+          <div class="list">Java · Python · ROS2 · DroneKit</div>
+        </div>
+        <div class="cat">
+          <h5>Domains</h5>
+          <div class="list">FRC robotics · VEX · Electrathon · UAV / drone systems</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" data-screen-label="06 Contact">
+    <div class="sec-head reveal" style="margin-bottom:24px">
+      <div class="label">Get in touch</div>
+    </div>
+    <h2 class="reveal">Looking for an engineering intern? <span class="accent">Let's talk.</span></h2>
+    <p class="lede-c reveal">Open to mechanical or electrical engineering internships and co-ops. Happy to walk through CAD, photos, or design reports in detail.</p>
+
+    <div class="channels reveal">
+      <a href="mailto:arnnav0kudale@gmail.com">
+        <span class="lbl">Email</span>
+        <span class="val">arnnav0kudale@gmail.com <span class="arr">↗</span></span>
+      </a>
+      <a href="https://www.linkedin.com/in/arnnav-kudale-934b85285/" target="_blank" rel="noopener">
+        <span class="lbl">LinkedIn</span>
+        <span class="val">/in/arnnav-kudale <span class="arr">↗</span></span>
+      </a>
+      <a href="https://github.com/blazecoding2009" target="_blank" rel="noopener">
+        <span class="lbl">GitHub</span>
+        <span class="val">@blazecoding2009 <span class="arr">↗</span></span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 Arnnav Kudale</div>
+    <div>Oakville, Ontario · Canada</div>
+  </footer>
+
+</main>
+
+<script>
+/* reveal on scroll */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+}, {rootMargin:'-40px 0px -40px 0px', threshold:0.05});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* scrollspy */
+const links = document.querySelectorAll('nav.top a[data-target]');
+const sections = [...document.querySelectorAll('section[id]')];
+function spy(){
+  const y = window.scrollY + 140;
+  let cur = sections[0].id;
+  for(const s of sections){ if(s.offsetTop <= y) cur = s.id; }
+  links.forEach(a => a.classList.toggle('active', a.dataset.target===cur));
+}
+window.addEventListener('scroll', spy, {passive:true}); spy();
+
+/* smooth scroll */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id = a.getAttribute('href');
+    if(id.length>1){ const t = document.querySelector(id); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'});} }
+  });
+});
+
+/* ── glossary tooltips */
+const tip = document.createElement('div');
+tip.id = 'tooltip';
+tip.innerHTML = '<div class="head"></div><div class="body"></div>';
+document.body.appendChild(tip);
+const tipHead = tip.querySelector('.head');
+const tipBody = tip.querySelector('.body');
+
+function positionTip(el){
+  const r = el.getBoundingClientRect();
+  const tw = tip.offsetWidth, th = tip.offsetHeight;
+  let x = r.left + r.width/2 - tw/2;
+  let y = r.top - th - 10;
+  if(y < 8){ y = r.bottom + 10; }           // flip below if no room above
+  x = Math.max(10, Math.min(x, window.innerWidth - tw - 10));
+  tip.style.left = x + 'px';
+  tip.style.top  = y + 'px';
+}
+let hideT;
+function showTip(el){
+  clearTimeout(hideT);
+  tipHead.textContent = el.dataset.tipLabel || 'Note';
+  tipBody.textContent = el.dataset.tip;
+  tip.style.opacity = '0';                  // measure
+  tip.classList.add('in');
+  // next frame: position with real size
+  requestAnimationFrame(()=>{ positionTip(el); tip.style.opacity = ''; });
+}
+function hideTip(){ hideT = setTimeout(()=> tip.classList.remove('in'), 80); }
+
+document.addEventListener('mouseover', (e)=>{
+  const el = e.target.closest('[data-tip]');
+  if(el) showTip(el);
+});
+document.addEventListener('mouseout', (e)=>{
+  const el = e.target.closest('[data-tip]');
+  if(el) hideTip();
+});
+// touch: tap to show, tap elsewhere to dismiss
+document.addEventListener('click', (e)=>{
+  const el = e.target.closest('[data-tip]');
+  if(el){ e.preventDefault(); showTip(el); setTimeout(hideTip, 2800); }
+  else if(tip.classList.contains('in')) hideTip();
+});
+window.addEventListener('scroll', ()=> tip.classList.remove('in'), {passive:true});
+
+/* ── scroll galleries */
+document.querySelectorAll('[data-gallery]').forEach(g=>{
+  const track = g.querySelector('.track');
+  const prev  = g.querySelector('.nav-btn.prev');
+  const next  = g.querySelector('.nav-btn.next');
+  function update(){
+    prev.toggleAttribute('disabled', track.scrollLeft <= 2);
+    next.toggleAttribute('disabled', track.scrollLeft + track.clientWidth >= track.scrollWidth - 2);
+  }
+  function step(dir){
+    const item = track.querySelector('.item');
+    const w = item ? item.getBoundingClientRect().width + 14 : track.clientWidth * .8;
+    track.scrollBy({left: dir * w, behavior:'smooth'});
+  }
+  prev.addEventListener('click', ()=> step(-1));
+  next.addEventListener('click', ()=> step(1));
+  track.addEventListener('scroll', update, {passive:true});
+  update();
+});
+</script>
+</body>
 </html>
