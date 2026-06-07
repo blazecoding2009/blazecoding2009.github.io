@@ -3,232 +3,186 @@
 <head>
 <meta charset="utf-8" />
 <title>Arnnav Kudale — Mechanical &amp; Electrical Engineering</title>
-<meta name="description" content="Arnnav Kudale — building things that move. Mechanical and electrical engineering portfolio. Oakville, Ontario." />
+<meta name="description" content="Arnnav Kudale — mechanical and electrical engineering. Race cars, FRC robots, autonomous drones. Oakville, Ontario." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,18..72,400;0,18..72,500;1,18..72,400&display=swap" rel="stylesheet" />
 <script src="image-slot.js"></script>
 <style>
 :root{
-  --bg:        #0f0e0c;
-  --bg-1:      #16140f;
-  --bg-2:      #1c1914;
-  --line:      #29251e;
-  --line-2:    #3a3428;
-  --fg:        #ece6d6;
-  --fg-1:      #a8a293;
-  --fg-2:      #6e6a5d;
-  --accent:    #ff7a3d;
-  --sans:      'Geist', -apple-system, system-ui, sans-serif;
-  --mono:      'JetBrains Mono', ui-monospace, monospace;
-  --maxw:      1100px;
+  --bg:        #14151a;
+  --bg-1:      #191b21;
+  --bg-2:      #1f222a;
+  --line:      #282b33;
+  --line-2:    #383c47;
+  --fg:        #e8e9ec;
+  --fg-1:      #a6a9b2;
+  --fg-2:      #6b6f7a;
+  --accent:    #93a4c2;
+  --serif:     'Newsreader', Georgia, 'Times New Roman', serif;
+  --sans:      'Archivo', -apple-system, system-ui, sans-serif;
+  --maxw:      1080px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html,body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 body{overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 ::selection{background:var(--accent);color:var(--bg)}
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
 @media (max-width:680px){.wrap{padding:0 22px}}
 
 /* ──────────────────  nav */
 nav.top{
   position:fixed;top:0;left:0;right:0;z-index:20;
-  background:linear-gradient(to bottom, rgba(15,14,12,.94), rgba(15,14,12,.7));
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  background:rgba(20,21,26,.86);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
 }
-nav.top .inner{max-width:var(--maxw);margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between}
-nav.top .brand{
-  font:500 14px/1 var(--mono);letter-spacing:.04em;color:var(--fg);
-  display:flex;align-items:center;gap:10px;
-}
-nav.top .brand .sq{width:9px;height:9px;background:var(--accent);display:inline-block}
-nav.top ul{display:flex;gap:22px;list-style:none}
+nav.top .inner{max-width:var(--maxw);margin:0 auto;padding:17px 36px;display:flex;align-items:center;justify-content:space-between}
+nav.top .brand{font-weight:600;font-size:15px;letter-spacing:-.01em;color:var(--fg)}
+nav.top ul{display:flex;gap:26px;list-style:none}
 nav.top ul a{
-  font:500 12px/1 var(--mono);letter-spacing:.06em;color:var(--fg-1);text-transform:uppercase;
-  padding-bottom:3px;position:relative;transition:color .2s;
+  font-size:14px;color:var(--fg-1);transition:color .2s;position:relative;padding-bottom:2px;
 }
 nav.top ul a:hover{color:var(--fg)}
 nav.top ul a.active{color:var(--fg)}
-nav.top ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--accent)}
+nav.top ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--fg-2)}
 @media (max-width:680px){
-  nav.top ul{gap:14px}
-  nav.top ul a{font-size:11px;letter-spacing:.04em}
+  nav.top ul{gap:16px}
+  nav.top ul a{font-size:13px}
   nav.top .inner{padding:14px 22px}
-  nav.top .brand{font-size:12px}
+}
+
+/* small kicker label shared by sections */
+.kicker{
+  font-size:12.5px;color:var(--fg-2);letter-spacing:.16em;text-transform:uppercase;font-weight:600;
 }
 
 /* ──────────────────  hero */
-.hero{padding:160px 0 120px;border-bottom:1px solid var(--line)}
-.hero .greeting{
-  font:500 12px/1 var(--mono);color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:32px;
-  display:inline-flex;align-items:center;gap:10px;
-}
-.hero .greeting::before{
-  content:"";width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 10px #3ddc84;
-  animation:pulse 2.6s infinite;
-}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero{padding:168px 0 116px;border-bottom:1px solid var(--line)}
+.hero .kicker{margin-bottom:30px}
 .hero h1{
-  font-weight:500;font-size:clamp(54px,8vw,98px);line-height:1;letter-spacing:-.035em;color:var(--fg);
+  font-family:var(--serif);font-weight:400;font-size:clamp(52px,8.4vw,104px);line-height:.98;letter-spacing:-.015em;color:var(--fg);
 }
-.hero h1 .accent{color:var(--accent)}
-.hero .name{
-  font:500 13px/1 var(--mono);color:var(--fg-2);letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px;
-}
+.hero h1 em{font-style:italic;color:var(--fg-1)}
 .hero .lede{
-  margin-top:36px;max-width:600px;
-  font-size:19px;line-height:1.6;color:var(--fg-1);
+  margin-top:34px;max-width:600px;
+  font-size:19.5px;line-height:1.62;color:var(--fg-1);
 }
 .hero .hero-meta{
-  margin-top:64px;padding-top:24px;border-top:1px solid var(--line);
-  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  margin-top:60px;padding-top:26px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:26px;
 }
-.hero-meta dl dt{font:500 11px/1 var(--mono);color:var(--fg-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
-.hero-meta dl dd{font-size:14.5px;color:var(--fg);font-weight:500}
+.hero-meta dl dt{font-size:11.5px;color:var(--fg-2);letter-spacing:.13em;text-transform:uppercase;margin-bottom:9px;font-weight:600}
+.hero-meta dl dd{font-size:15px;color:var(--fg);font-weight:500}
 @media (max-width:680px){
-  .hero{padding:130px 0 80px}
-  .hero .hero-meta{grid-template-columns:1fr 1fr;gap:18px}
+  .hero{padding:128px 0 76px}
+  .hero .hero-meta{grid-template-columns:1fr 1fr;gap:20px}
 }
 
 /* ──────────────────  sections */
-section{padding:110px 0;border-top:1px solid var(--line)}
+section{padding:104px 0;border-top:1px solid var(--line)}
 section:first-of-type{border-top:none}
 
-.sec-head{margin-bottom:64px}
-.sec-head .label{
-  font:500 11px/1 var(--mono);color:var(--accent);letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;
-  display:flex;align-items:center;gap:10px;
-}
-.sec-head .label::before{content:"";width:18px;height:1px;background:var(--accent)}
+.sec-head{margin-bottom:60px}
+.sec-head .kicker{margin-bottom:20px}
 .sec-head h2{
-  font-weight:500;font-size:clamp(32px,4.6vw,52px);line-height:1.05;letter-spacing:-.025em;
-  max-width:760px;
+  font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,48px);line-height:1.1;letter-spacing:-.01em;
+  max-width:780px;
 }
-.sec-head .sub{color:var(--fg-1);font-size:17px;max-width:640px;margin-top:14px;line-height:1.6}
+.sec-head .sub{color:var(--fg-1);font-size:17px;max-width:640px;margin-top:16px;line-height:1.6}
+
+/* gentle emphasis for jargon — no tooltips, no dashed underline */
+.term{color:var(--fg);font-weight:500}
 
 /* ──────────────────  about */
-.about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+.about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
 .about-port .frame{
-  width:100%;aspect-ratio:4/5;border-radius:3px;background:var(--bg-1);overflow:hidden;
-  border:1px solid var(--line);
+  width:100%;aspect-ratio:4/5;background:var(--bg-1);overflow:hidden;border:1px solid var(--line);
 }
 .about-port .frame > image-slot, .about-port .frame > img{
-  width:100%;height:100%;display:block;object-fit:cover;
-  filter:grayscale(.25) contrast(1.02);
+  width:100%;height:100%;display:block;object-fit:cover;filter:grayscale(.15);
 }
-.about-port .cap{
-  margin-top:14px;font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;
-  display:flex;justify-content:space-between;
-}
-.about-port .cap b{color:var(--fg)}
-.about-copy p{color:var(--fg-1);font-size:17.5px;line-height:1.75;margin-bottom:20px}
+.about-port .cap{margin-top:13px;font-size:13px;color:var(--fg-2)}
+.about-copy p{color:var(--fg-1);font-size:17.5px;line-height:1.74;margin-bottom:20px}
 .about-copy p:last-child{margin-bottom:0}
 .about-copy strong{color:var(--fg);font-weight:500}
 @media (max-width:780px){
-  .about-grid{grid-template-columns:1fr;gap:36px}
+  .about-grid{grid-template-columns:1fr;gap:34px}
   .about-port{max-width:300px}
 }
 
-/* ──────────────────  projects (the hero of this site) */
+/* ──────────────────  projects */
 .project{padding:0;border-top:1px solid var(--line)}
 .project:first-of-type{border-top:none}
-.project .body{padding:80px 0}
+.project .body{padding:76px 0}
 
 .project-head{
-  display:grid;grid-template-columns:60px 1fr auto;gap:24px;align-items:baseline;margin-bottom:32px;
+  display:grid;grid-template-columns:54px 1fr auto;gap:24px;align-items:baseline;margin-bottom:30px;
 }
-.project-head .num{
-  font:500 13px/1 var(--mono);color:var(--accent);letter-spacing:.04em;
-}
+.project-head .num{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--fg-2)}
 .project-head h3{
-  font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1;letter-spacing:-.025em;color:var(--fg);
+  font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.2vw,46px);line-height:1.04;letter-spacing:-.01em;color:var(--fg);
 }
-.project-head .yr{
-  font:500 12px/1 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;justify-self:end;
-}
+.project-head .yr{font-size:13px;color:var(--fg-2);letter-spacing:.04em;justify-self:end;white-space:nowrap}
 
-.project-meta{
-  display:grid;grid-template-columns:60px 1fr;gap:24px;margin-bottom:36px;
-}
+.project-meta{display:grid;grid-template-columns:54px 1fr;gap:24px;margin-bottom:34px}
 .project-meta .role{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px 32px;
-  font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;
 }
-.project-meta .role dt{margin-bottom:6px;color:var(--fg-2)}
-.project-meta .role dd{color:var(--fg);font-size:13px}
+.project-meta .role dt{font-size:11px;color:var(--fg-2);letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px;font-weight:600}
+.project-meta .role dd{color:var(--fg);font-size:14px}
 
-.project-body{display:grid;grid-template-columns:60px 1fr;gap:24px;align-items:start}
+.project-body{display:grid;grid-template-columns:54px 1fr;gap:24px;align-items:start}
 .project-body .copy{display:flex;flex-direction:column;gap:18px}
 .project-body .copy p{font-size:16px;color:var(--fg-1);line-height:1.7;max-width:760px}
-.project-body ul.contrib{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.project-body ul.contrib{list-style:none;display:flex;flex-direction:column;gap:13px;margin-top:6px}
 .project-body ul.contrib li{
-  display:grid;grid-template-columns:14px 1fr;gap:14px;font-size:15.5px;color:var(--fg-1);line-height:1.6;
+  display:grid;grid-template-columns:14px 1fr;gap:14px;font-size:15.5px;color:var(--fg-1);line-height:1.62;
 }
-.project-body ul.contrib li::before{
-  content:"";width:6px;height:6px;background:var(--accent);margin-top:9px;display:block;
-}
+.project-body ul.contrib li::before{content:"";width:6px;height:1px;background:var(--fg-2);margin-top:11px;display:block}
 .project-body ul.contrib li b{color:var(--fg);font-weight:500}
 
 @media (max-width:780px){
-  .project-head{grid-template-columns:1fr auto;gap:14px}
-  .project-head .num{grid-column:1 / -1;margin-bottom:-12px}
+  .project-head{grid-template-columns:1fr auto;gap:12px}
+  .project-head .num{grid-column:1 / -1;margin-bottom:-10px}
   .project-meta, .project-body{grid-template-columns:1fr;gap:14px}
 }
 
-/* specs block (warrig) */
+/* spec sheet — quiet data, not a dashboard */
 .specs{
-  margin-top:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
-  border:1px solid var(--line);border-radius:3px;overflow:hidden;
+  margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--line);border-left:none;
 }
-.specs .cell{background:var(--bg-1);padding:22px 20px}
-.specs .cell .k{font:500 10px/1 var(--mono);color:var(--fg-2);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
-.specs .cell .v{font-size:28px;font-weight:500;letter-spacing:-.02em;color:var(--fg)}
-.specs .cell .v small{font-size:13px;color:var(--fg-2);font-weight:400;letter-spacing:.02em;margin-left:4px}
-@media (max-width:780px){
-  .specs{grid-template-columns:1fr 1fr}
-}
+.specs .cell{padding:18px 22px;border-left:1px solid var(--line)}
+.specs .cell .k{font-size:10.5px;color:var(--fg-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;font-weight:600}
+.specs .cell .v{font-size:21px;font-weight:500;letter-spacing:-.01em;color:var(--fg)}
+.specs .cell .v small{font-size:12.5px;color:var(--fg-2);font-weight:400;margin-left:5px}
+@media (max-width:780px){.specs{grid-template-columns:1fr 1fr}}
 
 /* project images */
-.proj-images{margin-top:44px}
-.proj-images.featured{
-  display:grid;grid-template-columns:repeat(12,1fr);gap:14px;
-}
-.proj-images.featured .slot{position:relative;background:var(--bg-1);border:1px solid var(--line);overflow:hidden;border-radius:3px}
+.proj-images{margin-top:42px}
+.proj-images.featured{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.proj-images.featured .slot{position:relative;background:var(--bg-1);border:1px solid var(--line);overflow:hidden}
 .proj-images.featured .slot.lead{grid-column:span 12;aspect-ratio:21/10}
 .proj-images.featured .slot.side{grid-column:span 6;aspect-ratio:4/3}
 .proj-images.featured .slot image-slot, .proj-images.featured .slot img{width:100%;height:100%;object-fit:cover;display:block}
-.proj-images .cap{
-  margin-top:10px;font:500 10.5px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;
-  display:flex;justify-content:space-between;gap:14px;
-}
-.proj-images .cap b{color:var(--fg-1)}
+@media (max-width:780px){.proj-images.featured .slot.side{grid-column:span 12}}
 
-.proj-images.single{display:grid;grid-template-columns:1fr;gap:14px}
-.proj-images.single .slot{aspect-ratio:16/9;background:var(--bg-1);border:1px solid var(--line);overflow:hidden;border-radius:3px}
-.proj-images.single .slot image-slot, .proj-images.single .slot img{width:100%;height:100%;object-fit:cover}
-
-@media (max-width:780px){
-  .proj-images.featured .slot.side{grid-column:span 12}
-}
-
-/* awards inline (frc) */
-.inline-awards{
-  margin-top:28px;border:1px solid var(--line);border-radius:3px;
-  display:flex;flex-direction:column;
-}
+/* ──────────────────  awards inline */
+.inline-awards{margin-top:26px;border:1px solid var(--line);display:flex;flex-direction:column}
 .inline-awards .row{
-  display:grid;grid-template-columns:140px 1fr;gap:18px;
-  padding:16px 22px;border-bottom:1px solid var(--line);align-items:baseline;
+  display:grid;grid-template-columns:170px 1fr;gap:18px;
+  padding:15px 22px;border-bottom:1px solid var(--line);align-items:baseline;
 }
 .inline-awards .row:last-child{border-bottom:none}
-.inline-awards .row .yr{font:500 11px/1 var(--mono);color:var(--accent);letter-spacing:.1em}
+.inline-awards .row .yr{font-size:12px;color:var(--fg-2);letter-spacing:.04em}
 .inline-awards .row .ttl{font-size:14.5px;color:var(--fg)}
 .inline-awards .row .ttl span{color:var(--fg-2);display:block;margin-top:2px;font-size:13px}
-@media (max-width:680px){.inline-awards .row{grid-template-columns:1fr}.inline-awards .row .yr{font-size:10.5px}}
+@media (max-width:680px){.inline-awards .row{grid-template-columns:1fr}}
 
 /* ──────────────────  experience */
 .exp-list{display:flex;flex-direction:column}
@@ -237,26 +191,22 @@ section:first-of-type{border-top:none}
   padding:24px 0;border-bottom:1px solid var(--line);align-items:start;
 }
 .exp-row:first-child{border-top:1px solid var(--line)}
-.exp-row h4{font-size:19px;font-weight:500;letter-spacing:-.01em}
-.exp-row .role{font:500 11px/1 var(--mono);color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
-.exp-row .when{font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.1em;text-transform:uppercase;text-align:right;white-space:nowrap}
-.exp-row ul{
-  grid-column:1 / -1;list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:14px;
-}
-.exp-row ul li{
-  display:grid;grid-template-columns:14px 1fr;gap:12px;font-size:14.5px;color:var(--fg-1);line-height:1.55;
-}
+.exp-row h4{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.exp-row .role{font-size:13.5px;color:var(--fg-1);margin-top:5px}
+.exp-row .when{font-size:12.5px;color:var(--fg-2);letter-spacing:.04em;text-align:right;white-space:nowrap}
+.exp-row ul{grid-column:1 / -1;list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:14px}
+.exp-row ul li{display:grid;grid-template-columns:14px 1fr;gap:12px;font-size:14.5px;color:var(--fg-1);line-height:1.55}
 .exp-row ul li::before{content:"";width:5px;height:1px;background:var(--fg-2);margin-top:11px;display:block}
-@media (max-width:680px){.exp-row .when{font-size:10.5px}}
+@media (max-width:680px){.exp-row .when{font-size:11.5px}}
 
 /* ──────────────────  skills */
-.skills-grid{display:grid;grid-template-columns:1fr 2fr;gap:32px;border:1px solid var(--line);border-radius:3px;padding:32px}
-.skills-grid h4{font:500 11px/1 var(--mono);color:var(--accent);letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.skills-grid{display:grid;grid-template-columns:1fr 2fr;gap:34px;border:1px solid var(--line);padding:34px}
+.skills-grid h4{font-size:11px;color:var(--fg-2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:13px;font-weight:600}
 .skills-grid > div > p{font-size:14.5px;color:var(--fg-1);line-height:1.6}
-.skills-cats{display:flex;flex-direction:column;gap:22px}
+.skills-cats{display:flex;flex-direction:column;gap:20px}
 .skills-cats .cat{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--line)}
 .skills-cats .cat:last-child{border-bottom:none;padding-bottom:0}
-.skills-cats .cat h5{font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase}
+.skills-cats .cat h5{font-size:11px;color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 .skills-cats .cat .list{font-size:14.5px;color:var(--fg);line-height:1.65}
 @media (max-width:780px){
   .skills-grid{grid-template-columns:1fr;padding:24px}
@@ -265,88 +215,52 @@ section:first-of-type{border-top:none}
 
 /* ──────────────────  contact */
 .contact{padding-bottom:60px}
-.contact h2{font-size:clamp(40px,6vw,72px);line-height:1.05;letter-spacing:-.025em;margin-bottom:24px;font-weight:500}
-.contact h2 .accent{color:var(--accent)}
+.contact h2{font-family:var(--serif);font-size:clamp(38px,6vw,68px);line-height:1.06;letter-spacing:-.015em;margin-bottom:24px;font-weight:400}
+.contact h2 em{font-style:italic;color:var(--fg-1)}
 .contact .lede-c{color:var(--fg-1);font-size:18px;max-width:560px;margin-bottom:40px}
 .contact .channels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .contact .channels a{
-  display:flex;flex-direction:column;gap:8px;padding:22px 24px;border:1px solid var(--line);border-radius:3px;background:var(--bg-1);
-  transition:border-color .25s, transform .25s, background .25s;
+  display:flex;flex-direction:column;gap:9px;padding:22px 24px;border:1px solid var(--line);background:var(--bg-1);
+  transition:border-color .25s, background .25s;
 }
-.contact .channels a:hover{border-color:var(--accent);transform:translateY(-2px)}
-.contact .channels .lbl{font:500 10px/1 var(--mono);color:var(--fg-2);letter-spacing:.18em;text-transform:uppercase}
-.contact .channels .val{font-size:17px;color:var(--fg);font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:14px}
-.contact .channels .val .arr{color:var(--accent);transition:transform .25s}
-.contact .channels a:hover .val .arr{transform:translate(3px,-3px)}
+.contact .channels a:hover{border-color:var(--line-2);background:var(--bg-2)}
+.contact .channels .lbl{font-size:10.5px;color:var(--fg-2);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.contact .channels .val{font-size:16.5px;color:var(--fg);font-weight:500;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.contact .channels .val .arr{color:var(--fg-2);transition:transform .25s,color .25s}
+.contact .channels a:hover .val .arr{transform:translate(2px,-2px);color:var(--fg)}
 @media (max-width:780px){.contact .channels{grid-template-columns:1fr}}
 
-footer{padding:32px 0 40px;border-top:1px solid var(--line);font:500 11px/1.5 var(--mono);color:var(--fg-2);letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer{padding:30px 0 40px;border-top:1px solid var(--line);font-size:13px;color:var(--fg-2);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
 /* reveal */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 
-/* image-slot styling overrides — keep tones consistent */
-image-slot{
-  --slot-bg: var(--bg-2);
-  --slot-fg: var(--fg-2);
-  --slot-border: var(--line);
-}
-
-/* ──────────────────  glossary tooltips */
-.term{
-  border-bottom:1px dashed rgba(255,122,61,.45);
-  cursor:help;transition:border-color .2s, color .2s;
-}
-.term:hover{border-bottom-color:var(--accent);color:var(--fg)}
-#tooltip{
-  position:fixed;z-index:80;max-width:280px;
-  background:#1c1914;border:1px solid var(--line-2);color:var(--fg);
-  font:400 13.5px/1.55 var(--sans);letter-spacing:.005em;
-  padding:11px 14px;border-radius:5px;
-  box-shadow:0 14px 38px rgba(0,0,0,.55), 0 0 0 1px rgba(255,122,61,.06);
-  pointer-events:none;opacity:0;transform:translateY(-4px);
-  transition:opacity .14s ease, transform .14s ease;
-}
-#tooltip.in{opacity:1;transform:translateY(0)}
-#tooltip .head{
-  font:500 10px/1 var(--mono);color:var(--accent);letter-spacing:.16em;text-transform:uppercase;
-  margin-bottom:6px;display:flex;align-items:center;gap:8px;
-}
-#tooltip .head::before{content:"";width:10px;height:1px;background:var(--accent)}
-#tooltip .body{color:var(--fg-1)}
+image-slot{--slot-bg: var(--bg-2);--slot-fg: var(--fg-2);--slot-border: var(--line)}
 
 /* ──────────────────  scroll gallery */
-.gallery{position:relative;margin-top:44px}
+.gallery{position:relative;margin-top:42px}
 .gallery .track{
   display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
-  padding-bottom:12px;
-  scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;
+  padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;
 }
 .gallery .track::-webkit-scrollbar{height:6px}
 .gallery .track::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:3px}
 .gallery .track::-webkit-scrollbar-track{background:transparent}
 .gallery .item{flex:0 0 calc(72% - 6px);scroll-snap-align:start;min-width:280px}
-.gallery .slot{
-  aspect-ratio:16/10;border:1px solid var(--line);background:var(--bg-1);overflow:hidden;border-radius:3px;
-}
+.gallery .slot{aspect-ratio:16/10;border:1px solid var(--line);background:var(--bg-1);overflow:hidden}
 .gallery .slot > image-slot, .gallery .slot > img{width:100%;height:100%;object-fit:cover;display:block}
-.gallery .item .cap{
-  margin-top:10px;display:flex;justify-content:space-between;gap:14px;
-  font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;
-}
+.gallery .item .cap{margin-top:11px;display:flex;justify-content:space-between;gap:14px;font-size:13px;color:var(--fg-2)}
 .gallery .item .cap b{color:var(--fg);font-weight:500}
-.gallery .nav-btns{
-  margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;
-}
-.gallery .nav-btns .meta{font:500 11px/1.4 var(--mono);color:var(--fg-2);letter-spacing:.14em;text-transform:uppercase}
+.gallery .nav-btns{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.gallery .nav-btns .meta{font-size:12.5px;color:var(--fg-2);letter-spacing:.02em}
 .gallery .nav-btns .btns{display:flex;gap:8px}
 .gallery .nav-btn{
   width:38px;height:38px;border:1px solid var(--line-2);border-radius:50%;background:var(--bg-1);
   display:grid;place-items:center;color:var(--fg-1);cursor:pointer;font-size:15px;
   transition:border-color .2s, color .2s, background .2s;
 }
-.gallery .nav-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--bg-2)}
+.gallery .nav-btn:hover{border-color:var(--fg-2);color:var(--fg);background:var(--bg-2)}
 .gallery .nav-btn[disabled]{opacity:.4;cursor:not-allowed;border-color:var(--line)}
 @media (max-width:680px){.gallery .item{flex-basis:88%}}
 </style>
@@ -355,7 +269,7 @@ image-slot{
 
 <nav class="top">
   <div class="inner">
-    <a href="#home" class="brand"><span class="sq"></span>Arnnav Kudale</a>
+    <a href="#home" class="brand">Arnnav Kudale</a>
     <ul>
       <li><a href="#about"      data-target="about">About</a></li>
       <li><a href="#projects"   data-target="projects">Projects</a></li>
@@ -369,11 +283,10 @@ image-slot{
 
   <!-- HERO -->
   <section class="hero" id="home" data-screen-label="01 Hero">
-    <div class="greeting">Available for engineering internships</div>
-    <div class="name">Arnnav Kudale · Oakville, Ontario</div>
-    <h1>Building things<br/>that <span class="accent">move</span>.</h1>
+    <div class="kicker">Arnnav Kudale · Oakville, Ontario</div>
+    <h1>Building things<br/>that <em>move</em>.</h1>
     <p class="lede">
-      Mechanical and electrical engineering work — competition race cars, FRC robots, autonomous drones. Currently in my final years of high school, looking for opportunities to keep making things.
+      Mechanical and electrical engineering — competition race cars, FRC robots, autonomous drones. Currently in my final years of high school, looking for somewhere to keep building.
     </p>
     <div class="hero-meta">
       <dl><dt>Discipline</dt><dd>Mechanical · Electrical</dd></dl>
@@ -386,8 +299,8 @@ image-slot{
   <!-- ABOUT -->
   <section id="about" data-screen-label="02 About">
     <div class="sec-head reveal">
-      <div class="label">About</div>
-      <h2>Working at the seams between mechanical and electrical — where a decision in one discipline tends to break something in the other.</h2>
+      <div class="kicker">About</div>
+      <h2>I work at the seam between mechanical and electrical, where a decision on one side tends to break something on the other.</h2>
     </div>
 
     <div class="about-grid">
@@ -395,13 +308,13 @@ image-slot{
         <div class="frame">
           <image-slot id="portrait" src="assets/pfp.png" placeholder="Drop a portrait photo"></image-slot>
         </div>
-        <div class="cap"><span>Subject · <b>A. Kudale</b></span><span>01 / 01</span></div>
+        <div class="cap">Oakville, Ontario</div>
       </div>
       <div class="about-copy reveal">
-        <p>I build things. Most of my time goes into hands-on engineering — designing and machining parts for a competition electric race car, leading electrical on an FRC robot, and iterating drone hardware through three full hardware cycles. I was the first student on my FRC team certified on the <strong class="term" data-tip-label="Hardware" data-tip="3-axis production CNC mill from Tormach. Toolchanger-capable, rigid enough for production work in steel and aluminum.">Tormach 1100MX CNC mill</strong>, and I spent a summer at <strong class="term" data-tip-label="Organisation" data-tip="Defence Research and Development Organisation — India's premier defence R&amp;D agency.">DRDO</strong> developing autonomous drone software with <strong class="term" data-tip-label="Software" data-tip="Robot Operating System 2 — open-source robotics middleware for sensors, control, and inter-process messaging.">ROS2</strong>.</p>
-        <p>I work across mechanical and electrical, which means I spend a lot of time at the intersection where a design decision in one discipline breaks something in the other. That's the part I find most interesting.</p>
-        <p>Outside of build season I organize hackathons, mentor <strong class="term" data-tip-label="Program" data-tip="FIRST LEGO League — robotics competition for ages 9–16 using LEGO Education kits.">FLL</strong> teams, and hold a <strong class="term" data-tip-label="Rank" data-tip="A senior Royal Canadian Sea Cadet rank. Responsible for training, leading, and mentoring junior cadets.">Training Petty Officer</strong> role in the Royal Canadian Sea Cadets, where I've placed top in my phase four consecutive years.</p>
-        <p>Currently in my final years of high school in Oakville, Ontario. Looking for opportunities in mechanical or electrical engineering where I can keep making things.</p>
+        <p>I build things. Most of my time goes into hands-on engineering — designing and machining parts for a competition electric race car, leading electrical on an FRC robot, and iterating drone hardware through three full hardware cycles. I was the first student on my FRC team certified on the <strong class="term">Tormach 1100MX CNC mill</strong>, and I spent a summer at <strong class="term">DRDO</strong> developing autonomous drone software with <strong class="term">ROS2</strong>.</p>
+        <p>Working across both disciplines means I spend a lot of time at the intersection, where a design decision on the mechanical side breaks something electrical, or the reverse. That's the part I find most interesting.</p>
+        <p>Outside of build season I organize hackathons, mentor <strong class="term">FLL</strong> teams, and hold a Training Petty Officer role in the Royal Canadian Sea Cadets, where I've placed top in my phase four years running.</p>
+        <p>Currently in my final years of high school in Oakville, Ontario, looking for mechanical or electrical engineering work where I can keep making things.</p>
       </div>
     </div>
   </section>
@@ -409,9 +322,9 @@ image-slot{
   <!-- PROJECTS -->
   <section id="projects" data-screen-label="03 Projects" style="padding-bottom:0">
     <div class="sec-head reveal">
-      <div class="label">Selected projects</div>
-      <h2>Six projects — what I made, how I made it, what broke first.</h2>
-      <p class="sub">Each project is the result of hands-on iteration across mechanical and electrical disciplines. Where it matters, photos and CAD renders.</p>
+      <div class="kicker">Selected work</div>
+      <h2>Six builds, 2023 to now.</h2>
+      <p class="sub">What I made, how I made it, and where it first broke. Photos and CAD where they help.</p>
     </div>
 
     <!-- 01 · WARRIG X2 ──────────────────────────────── -->
@@ -419,7 +332,7 @@ image-slot{
       <div class="body">
         <header class="project-head">
           <span class="num">01</span>
-          <h3>Warrig X2 · Electrathon Race Car</h3>
+          <h3>Warrig X2 — Electrathon Race Car</h3>
           <span class="yr">2025 — Present</span>
         </header>
         <div class="project-meta">
@@ -435,11 +348,11 @@ image-slot{
         <div class="project-body">
           <span></span>
           <div class="copy">
-            <p>Single-seat electric race car competing in the Electrathon Canada series. I lead mechanical and electrical — the rear drivetrain redesign was the focal point of the 2025 season.</p>
+            <p>Single-seat electric race car competing in the Electrathon Canada series. I lead mechanical and electrical — the rear drivetrain redesign was the focus of the 2025 season.</p>
             <ul class="contrib">
-              <li><span><b>Replaced</b> a failing brushed single-motor system with <b class="term" data-tip-label="Hardware" data-tip="High-output brushless motor from WCP/CTRE. Common in FRC drivetrains; supports CAN telemetry and per-motor current limits.">three Kraken X60</b> brushless motors sharing a West Coast Products gearbox at an <b class="term" data-tip-label="Gearing" data-tip="Combined gear reduction across two stages: 12:60 internal gear pair, then 24:55 chain stage. Trades top speed for torque and thermal margin.">11.46:1 total reduction</b> (12:60 internal stage, 24:55 chain stage).</span></li>
-              <li><span><b>Designed the motor-mount bracket</b> through a full iteration cycle — started with a 3D-printed PLA prototype that exposed a structural failure mode in the bolt pattern, then redesigned and had the final version machined from aluminum.</span></li>
-              <li><span><b>Owned</b> <span class="term" data-tip-label="Protocol" data-tip="Controller Area Network — a robust serial bus standard used in vehicles and robots for low-latency device-to-device messaging.">CAN bus</span> layout, breaker sizing (<b class="term" data-tip-label="Component" data-tip="Bussmann's HI-AMP series — a heavy-duty automotive-grade resettable circuit breaker, sized to protect the main power bus.">120A Bussmann HI-AMP</b>), and per-motor current limiting via <span class="term" data-tip-label="Component" data-tip="CTRE's brushless motor controller for the Falcon / Kraken family. Streams motor current, temperature, and position over CAN.">Talon FX</span> telemetry.</span></li>
+              <li><span><b>Replaced</b> a failing brushed single-motor system with <b class="term">three Kraken X60</b> brushless motors sharing a West Coast Products gearbox at an <b class="term">11.46:1 total reduction</b> (12:60 internal stage, 24:55 chain stage).</span></li>
+              <li><span><b>Designed the motor-mount bracket</b> through a full iteration cycle — a 3D-printed PLA prototype exposed a structural failure in the bolt pattern, so I redesigned and had the final version machined from aluminum.</span></li>
+              <li><span><b>Owned</b> CAN bus layout and per-motor current limiting via Talon FX telemetry.</span></li>
               <li><span><b>Authored</b> the full Engineering Design Report submitted to competition.</span></li>
             </ul>
           </div>
@@ -448,7 +361,6 @@ image-slot{
         <div class="specs">
           <div class="cell"><div class="k">Motors</div><div class="v">3<small>× Kraken X60</small></div></div>
           <div class="cell"><div class="k">Reduction</div><div class="v">11.46<small>:1</small></div></div>
-          <div class="cell"><div class="k">Breaker</div><div class="v">120<small>A Bussmann</small></div></div>
           <div class="cell"><div class="k">Control</div><div class="v">CAN<small>+ Talon FX</small></div></div>
         </div>
 
@@ -456,23 +368,23 @@ image-slot{
           <div class="track">
             <div class="item">
               <div class="slot"><image-slot id="warrig-cad" src="assets/warrig_cad.png" placeholder="Drop CAD render — three-motor gearbox assembly"></image-slot></div>
-              <div class="cap"><span>Fig. <b>1.1</b></span><span>CAD · gearbox assembly</span></div>
+              <div class="cap"><b>Gearbox assembly</b><span>CAD render</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="warrig-gearbox" src="assets/warrig_gearbox.png" placeholder="Drop photo — physical gearbox hardware"></image-slot></div>
-              <div class="cap"><span>Fig. <b>1.2</b></span><span>Physical gearbox</span></div>
+              <div class="cap"><b>Physical gearbox</b><span>build</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="warrig-bracket" src="assets/warrig_bracket.png" placeholder="Drop photo — motor mount bracket"></image-slot></div>
-              <div class="cap"><span>Fig. <b>1.3</b></span><span>Aluminum motor mount</span></div>
+              <div class="cap"><b>Motor mount</b><span>machined aluminum</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="warrig-car" src="assets/warrig_car.png" placeholder="Drop photo — the car on track / in pit"></image-slot></div>
-              <div class="cap"><span>Fig. <b>1.4</b></span><span>Vehicle</span></div>
+              <div class="cap"><b>The car</b><span>track</span></div>
             </div>
           </div>
           <div class="nav-btns">
-            <span class="meta">Fig. <b style="color:var(--fg-1)">1.1 — 1.4</b> · Drivetrain build · scroll →</span>
+            <span class="meta">Drivetrain build — scroll for more</span>
             <div class="btns">
               <button class="nav-btn prev" aria-label="Previous">←</button>
               <button class="nav-btn next" aria-label="Next">→</button>
@@ -487,7 +399,7 @@ image-slot{
       <div class="body">
         <header class="project-head">
           <span class="num">02</span>
-          <h3>FRC 1360 · Orbit Robotics</h3>
+          <h3>FRC 1360 — Orbit Robotics</h3>
           <span class="yr">2023 — Present</span>
         </header>
         <div class="project-meta">
@@ -496,7 +408,7 @@ image-slot{
             <div><dt>Role</dt><dd>Build &amp; Design Member</dd></div>
             <div><dt>Discipline</dt><dd>Electrical · CNC · Software</dd></div>
             <div><dt>Seasons</dt><dd>2023 · 2024 · 2025 · 2026</dd></div>
-            <div><dt>Cert.</dt><dd>Tormach 1100MX CNC (first student)</dd></div>
+            <div><dt>Certified</dt><dd>Tormach 1100MX (first student)</dd></div>
           </dl>
         </div>
 
@@ -505,13 +417,13 @@ image-slot{
           <div class="copy">
             <ul class="contrib">
               <li><span><b>Led electrical</b> system design and wiring for the 2026 competition robot.</span></li>
-              <li><span>First student on the team certified on the <b class="term" data-tip-label="Hardware" data-tip="3-axis production CNC mill from Tormach. Toolchanger-capable, rigid enough for production work in steel and aluminum.">Tormach 1100MX CNC mill</b> and CNC router; trained on all shop machines.</span></li>
+              <li><span>First student on the team certified on the <b class="term">Tormach 1100MX CNC mill</b> and CNC router; trained on all shop machines.</span></li>
               <li><span><b>Programmed three competition robots</b> (2023, 2024, 2025) in Java; led a 10-person programming team for the 2024 robot.</span></li>
             </ul>
             <div class="inline-awards">
-              <div class="row"><span class="yr">2026 · Ontario DCMP</span><div class="ttl"><span class="term" data-tip-label="FIRST Award" data-tip="FIRST Engineering Inspiration Award — recognizes a team's outstanding success in advancing respect and appreciation for engineering in their school and community.">Engineering Inspiration Award</span></div></div>
-              <div class="row"><span class="yr">2026 · Niagara College</span><div class="ttl"><span class="term" data-tip-label="FIRST Award" data-tip="FIRST Engineering Inspiration Award — recognizes a team's outstanding success in advancing respect and appreciation for engineering in their school and community.">Engineering Inspiration Award</span><span>Finalists</span></div></div>
-              <div class="row"><span class="yr">2026 · Humber Polytechnic</span><div class="ttl"><span class="term" data-tip-label="FIRST Award" data-tip="FIRST's most prestigious team honour. Recognizes the team that best represents a model for other teams to emulate and impacts their community.">FIRST Impact Award</span></div></div>
+              <div class="row"><span class="yr">2026 · Ontario DCMP</span><div class="ttl">Engineering Inspiration Award</div></div>
+              <div class="row"><span class="yr">2026 · Niagara College</span><div class="ttl">Engineering Inspiration Award<span>Finalists</span></div></div>
+              <div class="row"><span class="yr">2026 · Humber Polytechnic</span><div class="ttl">FIRST Impact Award</div></div>
             </div>
           </div>
         </div>
@@ -520,23 +432,23 @@ image-slot{
           <div class="track">
             <div class="item">
               <div class="slot"><image-slot id="frc-2026" src="assets/frc_2026.JPG" placeholder="Drop 2026 robot photo"></image-slot></div>
-              <div class="cap"><span>Season <b>2026</b></span><span>current</span></div>
+              <div class="cap"><b>2026</b><span>Andromeda</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="frc-2025" src="assets/frc_2025.jpg" placeholder="Drop 2025 robot photo"></image-slot></div>
-              <div class="cap"><span>Season <b>2025</b></span><span>Reefscape</span></div>
+              <div class="cap"><b>2025</b><span>Triton</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="frc-2024" src="assets/frc_2024.png" placeholder="Drop 2024 robot photo"></image-slot></div>
-              <div class="cap"><span>Season <b>2024</b></span><span>Apollo</span></div>
+              <div class="cap"><b>2024</b><span>Apollo</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="frc-2023" src="assets/frc_2023.jpg" placeholder="Drop 2023 robot photo"></image-slot></div>
-              <div class="cap"><span>Season <b>2023</b></span><span>Armstrong</span></div>
+              <div class="cap"><b>2023</b><span>Armstrong</span></div>
             </div>
           </div>
           <div class="nav-btns">
-            <span class="meta">Fig. <b style="color:var(--fg-1)">2.1 — 2.4</b> · Robots, newest first · scroll →</span>
+            <span class="meta">Robots, newest first — scroll for more</span>
             <div class="btns">
               <button class="nav-btn prev" aria-label="Previous">←</button>
               <button class="nav-btn next" aria-label="Next">→</button>
@@ -578,23 +490,23 @@ image-slot{
           <div class="track">
             <div class="item">
               <div class="slot"><image-slot id="tf-v3" src="assets/tf_v3.png" placeholder="Drop v3 hardware photo"></image-slot></div>
-              <div class="cap"><span>Iteration <b>v3</b></span><span>current platform</span></div>
+              <div class="cap"><b>v3</b><span>current platform</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="tf-v2" src="assets/tf_v2.png" placeholder="Drop v2 hardware photo"></image-slot></div>
-              <div class="cap"><span>Iteration <b>v2</b></span><span>frame + power revision</span></div>
+              <div class="cap"><b>v2</b><span>frame + power revision</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="tf-v1" src="assets/tf_v1.png" placeholder="Drop v1 hardware photo"></image-slot></div>
-              <div class="cap"><span>Iteration <b>v1</b></span><span>first build</span></div>
+              <div class="cap"><b>v1</b><span>first build</span></div>
             </div>
             <div class="item">
               <div class="slot"><image-slot id="tf-survey" src="assets/tf_heatmap.png" placeholder="Drop aerial survey image / heatmap"></image-slot></div>
-              <div class="cap"><span>Survey <b>output</b></span><span>flammability risk heatmap</span></div>
+              <div class="cap"><b>Survey output</b><span>flammability heatmap</span></div>
             </div>
           </div>
           <div class="nav-btns">
-            <span class="meta">Fig. <b style="color:var(--fg-1)">3.1 — 3.4</b> · Hardware iterations, newest first · scroll →</span>
+            <span class="meta">Hardware iterations, newest first — scroll for more</span>
             <div class="btns">
               <button class="nav-btn prev" aria-label="Previous">←</button>
               <button class="nav-btn next" aria-label="Next">→</button>
@@ -609,15 +521,15 @@ image-slot{
       <div class="body">
         <header class="project-head">
           <span class="num">04</span>
-          <h3>DRDO · Autonomous Drone Internship</h3>
+          <h3>DRDO — Autonomous Drone Internship</h3>
           <span class="yr">Jul — Aug 2024</span>
         </header>
         <div class="project-meta">
           <span></span>
           <dl class="role">
             <div><dt>Role</dt><dd>Intern</dd></div>
-            <div><dt>Lab</dt><dd><span class="term" data-tip-label="Organisation" data-tip="Defence Research and Development Organisation — India's defence R&amp;D agency. The DYSL focuses on autonomous and drone systems.">DRDO</span> · India</dd></div>
-            <div><dt>Stack</dt><dd><span class="term" data-tip-label="Software" data-tip="Robot Operating System 2 — open-source robotics middleware for sensors, control, and inter-process messaging.">ROS2</span> · <span class="term" data-tip-label="Library" data-tip="Python API for controlling MAVLink-based autopilots from a companion computer or ground station.">DroneKit</span> · Python</dd></div>
+            <div><dt>Lab</dt><dd>DRDO · India</dd></div>
+            <div><dt>Stack</dt><dd>ROS2 · DroneKit · Python</dd></div>
             <div><dt>Mode</dt><dd>On-site</dd></div>
           </dl>
         </div>
@@ -677,7 +589,7 @@ image-slot{
             <div><dt>Role</dt><dd>Contributor · Forge Lead · Construct Reviewer</dd></div>
             <div><dt>Programs</dt><dd>Forge · Printing Legion · Construct</dd></div>
             <div><dt>Hackathons</dt><dd>Counterspell Ottawa + Toronto · 194 attendees</dd></div>
-            <div><dt>OSS</dt><dd>OnBoard · Blot</dd></div>
+            <div><dt>Open source</dt><dd>OnBoard · Blot</dd></div>
           </dl>
         </div>
 
@@ -685,7 +597,6 @@ image-slot{
           <span></span>
           <div class="copy">
             <ul class="contrib">
-              <li><span><b>Forge Lead</b> — led hardware build sessions for members across the community.</span></li>
               <li><span><b>Printing Legion Printer</b> — fulfilled hardware print requests for projects globally.</span></li>
               <li><span><b>Construct Reviewer</b> — evaluated member hardware grant applications.</span></li>
               <li><span>Organized <b>Counterspell Ottawa</b> (104 attendees) and <b>Counterspell Toronto</b> (90 attendees) — two in-person high-school hackathons totaling <b>194 attendees</b> across Ontario.</span></li>
@@ -701,7 +612,7 @@ image-slot{
   <!-- EXPERIENCE -->
   <section id="experience" data-screen-label="04 Experience">
     <div class="sec-head reveal">
-      <div class="label">Experience</div>
+      <div class="kicker">Experience</div>
       <h2>Where I've worked, built, and competed.</h2>
     </div>
 
@@ -716,7 +627,7 @@ image-slot{
         <ul>
           <li>Redesigned rear drivetrain from a failing brushed system to a three-motor brushless setup (Kraken X60, 11.46:1 reduction).</li>
           <li>Designed and iterated motor-mount bracket from 3D-printed prototype to machined aluminum.</li>
-          <li>Owned CAN bus layout, breaker sizing, and per-motor current limiting via Talon FX telemetry.</li>
+          <li>Owned CAN bus layout and per-motor current limiting via Talon FX telemetry.</li>
           <li>Authored the team's Engineering Design Report submitted to competition.</li>
         </ul>
       </div>
@@ -773,10 +684,12 @@ image-slot{
       <div class="exp-row reveal">
         <div>
           <h4>RCSCC 178 Oakville</h4>
-          <div class="role">Training Petty Officer / Cadet</div>
+          <div class="role">Chief Petty Officer 2nd Class · Training Chief</div>
         </div>
         <div class="when">Nov 2021 — Present</div>
         <ul>
+          <li>Promoted to Chief Petty Officer 2nd Class; Training Chief for the 2026–27 year.</li>
+          <li>Top Senior Cadet 2026.</li>
           <li>Top Phase Cadet four consecutive years (2022 — 2025).</li>
           <li>HMCS Quadra SBO — Wolf Division 2025.</li>
         </ul>
@@ -800,7 +713,7 @@ image-slot{
         </div>
         <div class="when">Apr 2024 — Present</div>
         <ul>
-          <li>Forge Lead, Printing Legion Printer, Construct Reviewer.</li>
+          <li>Printing Legion Printer, Construct Reviewer.</li>
           <li>Contributor and reviewer for OnBoard and Blot open-source projects.</li>
           <li>Organized Counterspell Ottawa and Counterspell Toronto — two in-person high-school hackathons, 194 attendees combined.</li>
         </ul>
@@ -847,14 +760,14 @@ image-slot{
   <!-- SKILLS -->
   <section id="skills" data-screen-label="05 Skills">
     <div class="sec-head reveal">
-      <div class="label">Skills</div>
+      <div class="kicker">Skills</div>
       <h2>What I reach for.</h2>
     </div>
 
     <div class="skills-grid reveal">
       <div>
         <h4>Approach</h4>
-        <p>Hardware-forward, iteration-driven. Most projects start in CAD, get a printed prototype to find what breaks, then a machined or wired final pass.</p>
+        <p>Hardware-forward and iteration-driven. Most projects start in CAD, get a printed prototype to find what breaks, then a machined or wired final pass.</p>
       </div>
       <div class="skills-cats">
         <div class="cat">
@@ -880,9 +793,9 @@ image-slot{
   <!-- CONTACT -->
   <section id="contact" class="contact" data-screen-label="06 Contact">
     <div class="sec-head reveal" style="margin-bottom:24px">
-      <div class="label">Get in touch</div>
+      <div class="kicker">Get in touch</div>
     </div>
-    <h2 class="reveal">Looking for an engineering intern? <span class="accent">Let's talk.</span></h2>
+    <h2 class="reveal">Looking for an engineering intern? <em>Let's talk.</em></h2>
     <p class="lede-c reveal">Open to mechanical or electrical engineering internships and co-ops. Happy to walk through CAD, photos, or design reports in detail.</p>
 
     <div class="channels reveal">
@@ -930,57 +843,11 @@ window.addEventListener('scroll', spy, {passive:true}); spy();
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click', e=>{
     const id = a.getAttribute('href');
-    if(id.length>1){ const t = document.querySelector(id); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'});} }
+    if(id.length>1){ const t = document.querySelector(id); if(t){ e.preventDefault(); window.scrollTo({top: t.offsetTop - 70, behavior:'smooth'});} }
   });
 });
 
-/* ── glossary tooltips */
-const tip = document.createElement('div');
-tip.id = 'tooltip';
-tip.innerHTML = '<div class="head"></div><div class="body"></div>';
-document.body.appendChild(tip);
-const tipHead = tip.querySelector('.head');
-const tipBody = tip.querySelector('.body');
-
-function positionTip(el){
-  const r = el.getBoundingClientRect();
-  const tw = tip.offsetWidth, th = tip.offsetHeight;
-  let x = r.left + r.width/2 - tw/2;
-  let y = r.top - th - 10;
-  if(y < 8){ y = r.bottom + 10; }           // flip below if no room above
-  x = Math.max(10, Math.min(x, window.innerWidth - tw - 10));
-  tip.style.left = x + 'px';
-  tip.style.top  = y + 'px';
-}
-let hideT;
-function showTip(el){
-  clearTimeout(hideT);
-  tipHead.textContent = el.dataset.tipLabel || 'Note';
-  tipBody.textContent = el.dataset.tip;
-  tip.style.opacity = '0';                  // measure
-  tip.classList.add('in');
-  // next frame: position with real size
-  requestAnimationFrame(()=>{ positionTip(el); tip.style.opacity = ''; });
-}
-function hideTip(){ hideT = setTimeout(()=> tip.classList.remove('in'), 80); }
-
-document.addEventListener('mouseover', (e)=>{
-  const el = e.target.closest('[data-tip]');
-  if(el) showTip(el);
-});
-document.addEventListener('mouseout', (e)=>{
-  const el = e.target.closest('[data-tip]');
-  if(el) hideTip();
-});
-// touch: tap to show, tap elsewhere to dismiss
-document.addEventListener('click', (e)=>{
-  const el = e.target.closest('[data-tip]');
-  if(el){ e.preventDefault(); showTip(el); setTimeout(hideTip, 2800); }
-  else if(tip.classList.contains('in')) hideTip();
-});
-window.addEventListener('scroll', ()=> tip.classList.remove('in'), {passive:true});
-
-/* ── scroll galleries */
+/* scroll galleries */
 document.querySelectorAll('[data-gallery]').forEach(g=>{
   const track = g.querySelector('.track');
   const prev  = g.querySelector('.nav-btn.prev');
