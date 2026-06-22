@@ -3,163 +3,154 @@
 <head>
 <meta charset="utf-8" />
 <title>Wishlist — Arnnav Kudale</title>
-<meta name="description" content="Things Arnnav is saving up for, hunting down, or hoping to build next — organized by topic." />
+<meta name="description" content="A running wishlist, organized by topic — tools, parts, and pipe dreams." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,18..72,400;0,18..72,500;1,18..72,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --bg:        #14151a;
-  --bg-1:      #191b21;
-  --bg-2:      #1f222a;
-  --line:      #282b33;
-  --line-2:    #383c47;
-  --fg:        #e8e9ec;
-  --fg-1:      #a6a9b2;
-  --fg-2:      #6b6f7a;
-  --accent:    #ff5b1f;
-  --serif:     'Newsreader', Georgia, 'Times New Roman', serif;
-  --sans:      'Archivo', -apple-system, system-ui, sans-serif;
-  --maxw:      1080px;
+  --bg:      #0c0d12;
+  --panel:   #15171f;
+  --panel-2: #1c1f29;
+  --line:    rgba(255,255,255,.08);
+  --line-2:  rgba(255,255,255,.16);
+  --fg:      #f4f5f7;
+  --fg-1:    #b6bac6;
+  --fg-2:    #777d8d;
+  --p1:      #ff5b1f;
+  --p2:      #ff2d75;
+  --p3:      #8b5cf6;
+  --blue:    #38bdf8;
+  --disp:    'Space Grotesk', system-ui, sans-serif;
+  --body:    'Inter', system-ui, sans-serif;
+  --maxw:    1080px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-body{overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-::selection{background:var(--accent);color:var(--bg)}
+::selection{background:var(--p2);color:#fff}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 36px}
-@media (max-width:680px){.wrap{padding:0 22px}}
-
-/* ──────────────────  nav */
-nav.top{
-  position:fixed;top:0;left:0;right:0;z-index:20;
-  background:rgba(20,21,26,.86);
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);
-}
-nav.top .inner{max-width:var(--maxw);margin:0 auto;padding:17px 36px;display:flex;align-items:center;justify-content:space-between}
-nav.top .brand{font-weight:600;font-size:15px;letter-spacing:-.01em;color:var(--fg)}
-nav.top ul{display:flex;gap:26px;list-style:none}
-nav.top ul a{font-size:14px;color:var(--fg-1);transition:color .2s;position:relative;padding-bottom:2px}
-nav.top ul a:hover{color:var(--fg)}
-nav.top ul a.active{color:var(--fg)}
-nav.top ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--fg-2)}
-@media (max-width:680px){
-  nav.top ul{gap:16px}
-  nav.top ul a{font-size:13px}
-  nav.top .inner{padding:14px 22px}
+/* ── ambient glow */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(900px 500px at 15% -5%, rgba(255,91,31,.18), transparent 60%),
+    radial-gradient(800px 500px at 95% 8%, rgba(139,92,246,.16), transparent 60%);
 }
 
-.kicker{font-size:12.5px;color:var(--fg-2);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+/* ── back link */
+.back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--fg-1);padding:22px 0;transition:color .2s}
+.back:hover{color:var(--fg)}
+.back span{font-size:18px}
 
-/* ──────────────────  hero */
-.hero{padding:168px 0 64px;border-bottom:1px solid var(--line)}
-.hero .kicker{margin-bottom:30px}
-.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(52px,8.4vw,104px);line-height:.98;letter-spacing:-.015em;color:var(--fg)}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero .lede{margin-top:34px;max-width:600px;font-size:19.5px;line-height:1.62;color:var(--fg-1)}
-@media (max-width:680px){.hero{padding:128px 0 48px}}
-
-/* ──────────────────  shared inputs */
-.fld{
-  font-family:var(--sans);font-size:15px;color:var(--fg);
-  background:var(--bg-1);border:1px solid var(--line-2);border-radius:7px;
-  padding:12px 15px;outline:none;transition:border-color .2s;
+/* ── BANNER */
+.banner{
+  position:relative;overflow:hidden;border-radius:28px;
+  padding:72px 56px 64px;margin-top:4px;
+  background:linear-gradient(135deg, #ff5b1f 0%, #ff2d75 48%, #8b5cf6 100%);
+  box-shadow:0 30px 80px -30px rgba(255,45,117,.5);
 }
+.banner::after{
+  content:"";position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay;
+  background:radial-gradient(600px 300px at 80% 120%, rgba(255,255,255,.5), transparent 60%);
+}
+.banner .eyebrow{font-family:var(--disp);font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85);position:relative}
+.banner h1{font-family:var(--disp);font-weight:700;font-size:clamp(50px,9vw,108px);line-height:.92;letter-spacing:-.03em;color:#fff;margin-top:18px;position:relative;text-shadow:0 4px 30px rgba(0,0,0,.18)}
+.banner p{margin-top:22px;max-width:560px;font-size:18px;line-height:1.55;color:rgba(255,255,255,.92);position:relative}
+.banner .stats{display:flex;gap:32px;margin-top:38px;position:relative;flex-wrap:wrap}
+.banner .stats .s b{font-family:var(--disp);font-size:32px;font-weight:700;letter-spacing:-.02em;color:#fff;display:block;line-height:1}
+.banner .stats .s span{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);font-weight:600}
+@media (max-width:680px){.banner{padding:48px 28px 44px;border-radius:22px}}
+
+/* ── shared inputs */
+.fld{font-family:var(--body);font-size:15px;color:var(--fg);background:var(--panel);border:1px solid var(--line-2);border-radius:11px;padding:13px 16px;outline:none;transition:border-color .2s,background .2s}
 .fld::placeholder{color:var(--fg-2)}
-.fld:focus{border-color:var(--accent)}
-.btn{
-  font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.01em;
-  background:var(--accent);color:var(--bg);border:none;border-radius:7px;
-  padding:12px 22px;cursor:pointer;transition:opacity .2s;white-space:nowrap;
-}
-.btn:hover{opacity:.88}
-.btn.ghost{background:transparent;color:var(--fg-1);border:1px solid var(--line-2)}
-.btn.ghost:hover{color:var(--fg);border-color:var(--fg-2);opacity:1}
+.fld:focus{border-color:var(--p2);background:var(--panel-2)}
+select.fld{cursor:pointer}
+.btn{font-family:var(--disp);font-size:14px;font-weight:600;letter-spacing:.01em;color:#fff;border:none;border-radius:11px;padding:13px 24px;cursor:pointer;transition:transform .12s,filter .2s;white-space:nowrap;background:linear-gradient(135deg,var(--p1),var(--p2))}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
 
-/* ──────────────────  add topic */
-.new-topic{padding:40px 0;border-bottom:1px solid var(--line)}
+/* ── add topic */
+.new-topic{margin-top:40px}
 .new-topic form{display:flex;gap:12px;flex-wrap:wrap}
-.new-topic .fld{flex:1;min-width:220px}
+.new-topic .fld{flex:1;min-width:240px}
 
-/* toolbar */
-.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:34px 0 4px;flex-wrap:wrap}
+/* ── toolbar */
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:36px;flex-wrap:wrap}
 .filters{display:flex;gap:8px;flex-wrap:wrap}
-.chip{font-size:13px;color:var(--fg-1);background:transparent;border:1px solid var(--line-2);border-radius:999px;padding:7px 16px;cursor:pointer;transition:all .2s;font-family:var(--sans)}
-.chip:hover{color:var(--fg);border-color:var(--fg-2)}
-.chip.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-.count{font-size:13px;color:var(--fg-2);letter-spacing:.04em}
+.chip{font-family:var(--body);font-size:13px;font-weight:500;color:var(--fg-1);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 17px;cursor:pointer;transition:all .2s}
+.chip:hover{color:var(--fg);border-color:var(--line-2)}
+.chip.on{background:#fff;color:#0c0d12;border-color:#fff;font-weight:600}
+.count{font-size:13px;color:var(--fg-2);letter-spacing:.03em}
 
-/* ──────────────────  topics */
-#topics{padding:24px 0 120px}
-.topic{border-top:1px solid var(--line);padding:40px 0}
-.topic-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:8px}
-.topic-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,4vw,38px);line-height:1.1;letter-spacing:-.01em}
-.topic-head .tcount{font-size:12.5px;color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;font-weight:600;white-space:nowrap}
-.topic-del{background:none;border:none;color:var(--fg-2);font-size:13px;cursor:pointer;font-family:var(--sans);transition:color .2s;padding:2px 0}
-.topic-del:hover{color:var(--accent)}
+/* ── topics */
+#topics{margin:28px 0 100px;display:flex;flex-direction:column;gap:22px}
+.topic{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px 28px;transition:border-color .2s}
+.topic:hover{border-color:var(--line-2)}
+.topic-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.topic-head h2{font-family:var(--disp);font-weight:600;font-size:24px;letter-spacing:-.01em;display:flex;align-items:center;gap:12px}
+.topic-head h2::before{content:"";width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--p1),var(--p2));flex:none}
+.topic-head .right{display:flex;align-items:center;gap:16px}
+.tcount{font-size:12px;color:var(--fg-2);letter-spacing:.1em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.topic-del{background:none;border:none;color:var(--fg-2);font-size:13px;cursor:pointer;font-family:var(--body);transition:color .2s}
+.topic-del:hover{color:var(--p2)}
 
-/* item add row */
-.item-add{display:grid;grid-template-columns:1fr 130px 140px auto;gap:10px;margin:18px 0 6px}
-.item-add .fld,.item-add .btn{padding:11px 14px;font-size:14px}
+/* ── add item */
+.item-add{display:grid;grid-template-columns:1fr 120px 130px auto;gap:10px;margin:20px 0 16px}
+.item-add .fld,.item-add .btn{padding:11px 14px;font-size:14px;border-radius:10px}
 @media (max-width:680px){.item-add{grid-template-columns:1fr 1fr}.item-add .btn{grid-column:1/-1}}
 
-/* item rows */
-.item{display:grid;grid-template-columns:auto 1fr auto auto;gap:18px;align-items:center;padding:18px 2px;border-bottom:1px solid var(--line);transition:opacity .2s}
-.item:last-child{border-bottom:none}
-.item .check{width:21px;height:21px;border:1.5px solid var(--line-2);border-radius:50%;cursor:pointer;flex:none;transition:all .2s;position:relative}
-.item .check:hover{border-color:var(--accent)}
-.item.got .check{background:var(--accent);border-color:var(--accent)}
-.item.got .check::after{content:"";position:absolute;left:6.5px;top:3px;width:5px;height:9px;border:solid var(--bg);border-width:0 2px 2px 0;transform:rotate(45deg)}
-.item .body .name{font-size:17px;color:var(--fg);font-weight:500;letter-spacing:-.005em}
-.item .body .meta{font-size:13px;color:var(--fg-2);margin-top:4px;display:flex;gap:10px;align-items:center}
-.item.got .body .name{color:var(--fg-2);text-decoration:line-through;text-decoration-color:var(--line-2)}
-.pri{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid var(--line-2);color:var(--fg-1)}
-.pri.high{color:var(--accent);border-color:var(--accent)}
-.pri.dream{color:#7da6ff;border-color:#37456b}
-.price{font-family:var(--serif);font-size:19px;color:var(--fg);font-style:italic}
-.del{background:none;border:none;color:var(--fg-2);font-size:20px;line-height:1;cursor:pointer;padding:4px 8px;transition:color .2s;font-family:var(--sans)}
-.del:hover{color:var(--accent)}
-.topic-empty{padding:10px 2px;color:var(--fg-2);font-size:14px;font-style:italic;font-family:var(--serif)}
-@media (max-width:680px){.item{grid-template-columns:auto 1fr auto;gap:14px}.price{display:none}}
+/* ── items */
+.item{display:grid;grid-template-columns:auto 1fr auto auto;gap:16px;align-items:center;padding:15px 0;border-top:1px solid var(--line);transition:opacity .2s}
+.item .check{width:22px;height:22px;border:2px solid var(--line-2);border-radius:7px;cursor:pointer;flex:none;transition:all .2s;position:relative}
+.item .check:hover{border-color:var(--p2)}
+.item.got .check{background:linear-gradient(135deg,var(--p1),var(--p2));border-color:transparent}
+.item.got .check::after{content:"";position:absolute;left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.item .name{font-size:16px;color:var(--fg);font-weight:500}
+.item .sub{font-size:12px;color:var(--fg-2);margin-top:3px}
+.item.got .name{color:var(--fg-2);text-decoration:line-through}
+.pri{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.pri.want{background:rgba(56,189,248,.14);color:var(--blue)}
+.pri.high{background:rgba(255,91,31,.16);color:var(--p1)}
+.pri.dream{background:rgba(139,92,246,.18);color:#a78bfa}
+.price{font-family:var(--disp);font-size:17px;font-weight:600;color:var(--fg)}
+.del{background:none;border:none;color:var(--fg-2);font-size:20px;line-height:1;cursor:pointer;padding:4px 6px;transition:color .2s}
+.del:hover{color:var(--p2)}
+.topic-empty{color:var(--fg-2);font-size:14px;padding:6px 0}
+@media (max-width:680px){.item{grid-template-columns:auto 1fr auto;gap:12px}.price{display:none}}
 
-.empty{padding:90px 0;text-align:center;color:var(--fg-2);border-top:1px solid var(--line)}
-.empty .big{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--fg-1);margin-bottom:8px}
+/* ── empty state */
+.empty{text-align:center;padding:80px 20px;background:var(--panel);border:1px dashed var(--line-2);border-radius:20px;color:var(--fg-2)}
+.empty .big{font-family:var(--disp);font-size:24px;font-weight:600;color:var(--fg-1);margin-bottom:8px}
 
-footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:40px 0;border-top:1px solid var(--line);color:var(--fg-2);font-size:13.5px}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:34px 0;border-top:1px solid var(--line);color:var(--fg-2);font-size:13px}
 </style>
 </head>
 <body>
 
-<nav class="top">
-  <div class="inner">
-    <a href="/" class="brand">Arnnav Kudale</a>
-    <ul>
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#projects">Projects</a></li>
-      <li><a href="/#experience">Experience</a></li>
-      <li><a href="/wishlist" class="active">Wishlist</a></li>
-    </ul>
-  </div>
-</nav>
-
 <main class="wrap">
 
-  <section class="hero">
-    <div class="kicker">Saving up · Hunting down · Building next</div>
-    <h1>The <em>wishlist</em>.</h1>
-    <p class="lede">
-      Organized by topic — make your own sections, then add what you want under each. Tools, parts, pipe dreams. All saved right here in your browser.
-    </p>
-  </section>
+  <a href="/" class="back"><span>←</span> Back to portfolio</a>
+
+  <header class="banner">
+    <div class="eyebrow">Saving up · Hunting down · Building next</div>
+    <h1>Wishlist</h1>
+    <p>Everything I'm working toward for the bench, the shop, and the next build — organized into topics you can add to. Saved right here in your browser.</p>
+    <div class="stats">
+      <div class="s"><b id="st-topics">0</b><span>Topics</span></div>
+      <div class="s"><b id="st-items">0</b><span>Items</span></div>
+      <div class="s"><b id="st-got">0</b><span>Crossed off</span></div>
+    </div>
+  </header>
 
   <section class="new-topic">
     <form id="topic-form">
       <input id="t-name" class="fld" type="text" placeholder="New topic — e.g. Shop tools, Race car, Books…" autocomplete="off" required />
-      <button class="btn" type="submit">Add topic</button>
+      <button class="btn" type="submit">+ Add topic</button>
     </form>
   </section>
 
@@ -228,9 +219,7 @@ function render(){
   topicsEl.innerHTML = '';
 
   if(!topics.length){
-    topicsEl.innerHTML = '<div class="empty"><div class="big">No topics yet.</div><div>Add one above to start your list.</div></div>';
-    countEl.textContent = '';
-    return;
+    topicsEl.innerHTML = '<div class="empty"><div class="big">No topics yet</div><div>Add one above to start your list.</div></div>';
   }
 
   for(const t of topics){
@@ -244,20 +233,19 @@ function render(){
     const h2 = document.createElement('h2');
     h2.textContent = t.name;
     const right = document.createElement('div');
-    right.style.cssText = 'display:flex;align-items:center;gap:16px';
+    right.className = 'right';
     const tcount = document.createElement('span');
     tcount.className = 'tcount';
     const gotN = t.items.filter(i=>i.got).length;
     tcount.textContent = t.items.length + ' item' + (t.items.length!==1?'s':'') + ' · ' + gotN + ' got';
     const tdel = document.createElement('button');
     tdel.className = 'topic-del';
-    tdel.textContent = 'Remove topic';
+    tdel.textContent = 'Remove';
     tdel.addEventListener('click', ()=>removeTopic(t.id));
     right.appendChild(tcount); right.appendChild(tdel);
     head.appendChild(h2); head.appendChild(right);
     sec.appendChild(head);
 
-    // add-item row
     const form = document.createElement('form');
     form.className = 'item-add';
     form.innerHTML =
@@ -279,7 +267,6 @@ function render(){
     });
     sec.appendChild(form);
 
-    // items
     if(!t.items.length){
       const e = document.createElement('div');
       e.className = 'topic-empty';
@@ -294,14 +281,14 @@ function render(){
       for(const it of visible){
         const row = document.createElement('div');
         row.className = 'item' + (it.got ? ' got' : '');
-        const priClass = it.pri==='high' ? 'pri high' : it.pri==='dream' ? 'pri dream' : 'pri';
         row.innerHTML =
           '<div class="check" role="checkbox" aria-checked="'+it.got+'" tabindex="0"></div>' +
-          '<div class="body"><div class="name"></div>' +
-            '<div class="meta"><span class="'+priClass+'">'+PRI_LABEL[it.pri]+'</span>' +
-            (it.got ? '<span>· crossed off</span>' : '') + '</div></div>' +
-          '<div class="price">'+(it.price||'')+'</div>' +
-          '<button class="del" title="Remove" aria-label="Remove">&times;</button>';
+          '<div><div class="name"></div>' + (it.got ? '<div class="sub">crossed off</div>' : '') + '</div>' +
+          '<span class="pri '+it.pri+'">'+PRI_LABEL[it.pri]+'</span>' +
+          '<div style="display:flex;align-items:center;gap:8px">' +
+            '<span class="price">'+(it.price||'')+'</span>' +
+            '<button class="del" title="Remove" aria-label="Remove">&times;</button>' +
+          '</div>';
         row.querySelector('.name').textContent = it.name;
         row.querySelector('.check').addEventListener('click', ()=>toggle(it.id));
         row.querySelector('.check').addEventListener('keydown', e=>{ if(e.key===' '||e.key==='Enter'){ e.preventDefault(); toggle(it.id); }});
@@ -315,7 +302,10 @@ function render(){
 
   const all = topics.flatMap(t=>t.items);
   const got = all.filter(i=>i.got).length;
-  countEl.textContent = topics.length + ' topic' + (topics.length!==1?'s':'') + ' · ' + all.length + ' item' + (all.length!==1?'s':'') + ' · ' + got + ' got';
+  document.getElementById('st-topics').textContent = topics.length;
+  document.getElementById('st-items').textContent = all.length;
+  document.getElementById('st-got').textContent = got;
+  countEl.textContent = topics.length + ' topic' + (topics.length!==1?'s':'') + ' · ' + all.length + ' item' + (all.length!==1?'s':'');
 }
 
 function toggle(id){
@@ -325,9 +315,7 @@ function toggle(id){
 function removeItem(tid, id){
   const t = topics.find(t=>t.id===tid); if(t){ t.items = t.items.filter(i=>i.id!==id); save(); render(); }
 }
-function removeTopic(id){
-  topics = topics.filter(t=>t.id!==id); save(); render();
-}
+function removeTopic(id){ topics = topics.filter(t=>t.id!==id); save(); render(); }
 
 document.getElementById('topic-form').addEventListener('submit', e=>{
   e.preventDefault();
