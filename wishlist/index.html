@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8" />
 <title>Wishlist — Arnnav Kudale</title>
-<meta name="description" content="A running wishlist, organized by topic — tools, parts, and pipe dreams." />
+<meta name="description" content="A running wishlist, organized by topic — fits, baking, home, travel and more." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --bg:      #0c0d12;
-  --panel:   #15171f;
-  --panel-2: #1c1f29;
-  --line:    rgba(255,255,255,.08);
-  --line-2:  rgba(255,255,255,.16);
-  --fg:      #f4f5f7;
-  --fg-1:    #b6bac6;
-  --fg-2:    #777d8d;
+  --bg:      #f6f7f9;
+  --panel:   #ffffff;
+  --panel-2: #fbfbfc;
+  --line:    #ececf0;
+  --line-2:  #dcdde3;
+  --fg:      #15161c;
+  --fg-1:    #5b606e;
+  --fg-2:    #9aa0ac;
   --p1:      #ff5b1f;
   --p2:      #ff2d75;
   --p3:      #8b5cf6;
-  --blue:    #38bdf8;
+  --blue:    #2596e6;
   --disp:    'Space Grotesk', system-ui, sans-serif;
   --body:    'Inter', system-ui, sans-serif;
   --maxw:    1080px;
@@ -33,75 +33,68 @@ a{color:inherit;text-decoration:none}
 ::selection{background:var(--p2);color:#fff}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
-/* ── ambient glow */
-body::before{
-  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background:
-    radial-gradient(900px 500px at 15% -5%, rgba(255,91,31,.18), transparent 60%),
-    radial-gradient(800px 500px at 95% 8%, rgba(139,92,246,.16), transparent 60%);
-}
-
 /* ── back link */
-.back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--fg-1);padding:22px 0;transition:color .2s}
+.back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--fg-1);padding:24px 0 6px;transition:color .2s}
 .back:hover{color:var(--fg)}
 .back span{font-size:18px}
 
 /* ── BANNER */
 .banner{
   position:relative;overflow:hidden;border-radius:28px;
-  padding:72px 56px 64px;margin-top:4px;
-  background:linear-gradient(135deg, #ff5b1f 0%, #ff2d75 48%, #8b5cf6 100%);
-  box-shadow:0 30px 80px -30px rgba(255,45,117,.5);
+  padding:72px 56px 60px;margin-top:8px;
+  background:linear-gradient(135deg, #ff7a3d 0%, #ff2d75 50%, #8b5cf6 100%);
+  box-shadow:0 24px 60px -28px rgba(255,45,117,.45);
 }
 .banner::after{
-  content:"";position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay;
-  background:radial-gradient(600px 300px at 80% 120%, rgba(255,255,255,.5), transparent 60%);
+  content:"";position:absolute;inset:0;opacity:.45;mix-blend-mode:overlay;
+  background:radial-gradient(620px 320px at 85% 130%, rgba(255,255,255,.6), transparent 60%);
 }
-.banner .eyebrow{font-family:var(--disp);font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85);position:relative}
-.banner h1{font-family:var(--disp);font-weight:700;font-size:clamp(50px,9vw,108px);line-height:.92;letter-spacing:-.03em;color:#fff;margin-top:18px;position:relative;text-shadow:0 4px 30px rgba(0,0,0,.18)}
-.banner p{margin-top:22px;max-width:560px;font-size:18px;line-height:1.55;color:rgba(255,255,255,.92);position:relative}
-.banner .stats{display:flex;gap:32px;margin-top:38px;position:relative;flex-wrap:wrap}
+.banner .eyebrow{font-family:var(--disp);font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.9);position:relative}
+.banner h1{font-family:var(--disp);font-weight:700;font-size:clamp(50px,9vw,108px);line-height:.92;letter-spacing:-.03em;color:#fff;margin-top:16px;position:relative;text-shadow:0 4px 24px rgba(0,0,0,.14)}
+.banner p{margin-top:20px;max-width:560px;font-size:18px;line-height:1.55;color:rgba(255,255,255,.95);position:relative}
+.banner .stats{display:flex;gap:34px;margin-top:36px;position:relative;flex-wrap:wrap}
 .banner .stats .s b{font-family:var(--disp);font-size:32px;font-weight:700;letter-spacing:-.02em;color:#fff;display:block;line-height:1}
-.banner .stats .s span{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);font-weight:600}
-@media (max-width:680px){.banner{padding:48px 28px 44px;border-radius:22px}}
+.banner .stats .s span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600}
+@media (max-width:680px){.banner{padding:46px 26px 42px;border-radius:22px}}
 
-/* ── shared inputs */
-.fld{font-family:var(--body);font-size:15px;color:var(--fg);background:var(--panel);border:1px solid var(--line-2);border-radius:11px;padding:13px 16px;outline:none;transition:border-color .2s,background .2s}
+/* ── inputs */
+.fld{font-family:var(--body);font-size:15px;color:var(--fg);background:var(--panel);border:1px solid var(--line-2);border-radius:11px;padding:13px 16px;outline:none;transition:border-color .2s,box-shadow .2s}
 .fld::placeholder{color:var(--fg-2)}
-.fld:focus{border-color:var(--p2);background:var(--panel-2)}
+.fld:focus{border-color:var(--p2);box-shadow:0 0 0 3px rgba(255,45,117,.12)}
 select.fld{cursor:pointer}
-.btn{font-family:var(--disp);font-size:14px;font-weight:600;letter-spacing:.01em;color:#fff;border:none;border-radius:11px;padding:13px 24px;cursor:pointer;transition:transform .12s,filter .2s;white-space:nowrap;background:linear-gradient(135deg,var(--p1),var(--p2))}
-.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn{font-family:var(--disp);font-size:14px;font-weight:600;letter-spacing:.01em;color:#fff;border:none;border-radius:11px;padding:13px 24px;cursor:pointer;transition:transform .12s,filter .2s;white-space:nowrap;background:linear-gradient(135deg,var(--p1),var(--p2));box-shadow:0 8px 20px -8px rgba(255,45,117,.5)}
+.btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
 .btn:active{transform:translateY(0)}
 
 /* ── add topic */
-.new-topic{margin-top:40px}
+.new-topic{margin-top:38px}
 .new-topic form{display:flex;gap:12px;flex-wrap:wrap}
 .new-topic .fld{flex:1;min-width:240px}
 
 /* ── toolbar */
-.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:36px;flex-wrap:wrap}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:34px;flex-wrap:wrap}
 .filters{display:flex;gap:8px;flex-wrap:wrap}
 .chip{font-family:var(--body);font-size:13px;font-weight:500;color:var(--fg-1);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 17px;cursor:pointer;transition:all .2s}
 .chip:hover{color:var(--fg);border-color:var(--line-2)}
-.chip.on{background:#fff;color:#0c0d12;border-color:#fff;font-weight:600}
+.chip.on{background:var(--fg);color:#fff;border-color:var(--fg);font-weight:600}
 .count{font-size:13px;color:var(--fg-2);letter-spacing:.03em}
 
 /* ── topics */
-#topics{margin:28px 0 100px;display:flex;flex-direction:column;gap:22px}
-.topic{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px 28px;transition:border-color .2s}
-.topic:hover{border-color:var(--line-2)}
+#topics{margin:26px 0 100px;display:flex;flex-direction:column;gap:20px}
+.topic{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px 28px;box-shadow:0 1px 2px rgba(16,18,30,.04),0 10px 30px -22px rgba(16,18,30,.25);transition:box-shadow .2s,transform .2s}
+.topic:hover{box-shadow:0 1px 2px rgba(16,18,30,.05),0 18px 44px -24px rgba(16,18,30,.3);transform:translateY(-1px)}
 .topic-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .topic-head h2{font-family:var(--disp);font-weight:600;font-size:24px;letter-spacing:-.01em;display:flex;align-items:center;gap:12px}
-.topic-head h2::before{content:"";width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--p1),var(--p2));flex:none}
+.topic-head h2 .emoji{font-size:24px;line-height:1}
 .topic-head .right{display:flex;align-items:center;gap:16px}
 .tcount{font-size:12px;color:var(--fg-2);letter-spacing:.1em;text-transform:uppercase;font-weight:600;white-space:nowrap}
 .topic-del{background:none;border:none;color:var(--fg-2);font-size:13px;cursor:pointer;font-family:var(--body);transition:color .2s}
 .topic-del:hover{color:var(--p2)}
 
 /* ── add item */
-.item-add{display:grid;grid-template-columns:1fr 120px 130px auto;gap:10px;margin:20px 0 16px}
+.item-add{display:grid;grid-template-columns:1fr 120px 130px auto;gap:10px;margin:20px 0 12px}
 .item-add .fld,.item-add .btn{padding:11px 14px;font-size:14px;border-radius:10px}
+.item-add .fld{background:var(--panel-2)}
 @media (max-width:680px){.item-add{grid-template-columns:1fr 1fr}.item-add .btn{grid-column:1/-1}}
 
 /* ── items */
@@ -114,16 +107,16 @@ select.fld{cursor:pointer}
 .item .sub{font-size:12px;color:var(--fg-2);margin-top:3px}
 .item.got .name{color:var(--fg-2);text-decoration:line-through}
 .pri{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
-.pri.want{background:rgba(56,189,248,.14);color:var(--blue)}
-.pri.high{background:rgba(255,91,31,.16);color:var(--p1)}
-.pri.dream{background:rgba(139,92,246,.18);color:#a78bfa}
+.pri.want{background:rgba(37,150,230,.12);color:var(--blue)}
+.pri.high{background:rgba(255,91,31,.14);color:#e0480f}
+.pri.dream{background:rgba(139,92,246,.14);color:#7c3aed}
 .price{font-family:var(--disp);font-size:17px;font-weight:600;color:var(--fg)}
 .del{background:none;border:none;color:var(--fg-2);font-size:20px;line-height:1;cursor:pointer;padding:4px 6px;transition:color .2s}
 .del:hover{color:var(--p2)}
 .topic-empty{color:var(--fg-2);font-size:14px;padding:6px 0}
 @media (max-width:680px){.item{grid-template-columns:auto 1fr auto;gap:12px}.price{display:none}}
 
-/* ── empty state */
+/* ── empty */
 .empty{text-align:center;padding:80px 20px;background:var(--panel);border:1px dashed var(--line-2);border-radius:20px;color:var(--fg-2)}
 .empty .big{font-family:var(--disp);font-size:24px;font-weight:600;color:var(--fg-1);margin-bottom:8px}
 
@@ -137,19 +130,19 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
   <a href="/" class="back"><span>←</span> Back to portfolio</a>
 
   <header class="banner">
-    <div class="eyebrow">Saving up · Hunting down · Building next</div>
+    <div class="eyebrow">Saving up · Hunting down · Treating myself</div>
     <h1>Wishlist</h1>
-    <p>Everything I'm working toward for the bench, the shop, and the next build — organized into topics you can add to. Saved right here in your browser.</p>
+    <p>All the stuff I'm eyeing — fits, baking gear, room upgrades, trips. Organized into topics you can add to. Saved right here in your browser.</p>
     <div class="stats">
       <div class="s"><b id="st-topics">0</b><span>Topics</span></div>
       <div class="s"><b id="st-items">0</b><span>Items</span></div>
-      <div class="s"><b id="st-got">0</b><span>Crossed off</span></div>
+      <div class="s"><b id="st-got">0</b><span>Got it</span></div>
     </div>
   </header>
 
   <section class="new-topic">
     <form id="topic-form">
-      <input id="t-name" class="fld" type="text" placeholder="New topic — e.g. Shop tools, Race car, Books…" autocomplete="off" required />
+      <input id="t-name" class="fld" type="text" placeholder="New topic — e.g. Hoodies, Baking, Room, Trips…" autocomplete="off" required />
       <button class="btn" type="submit">+ Add topic</button>
     </form>
   </section>
@@ -175,18 +168,50 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
 </main>
 
 <script>
-const KEY = 'ak-wishlist-v2';
+const KEY = 'ak-wishlist-v3';
 const PRI_LABEL = {want:'Want', high:'Need it', dream:'Dream'};
 
+function emojiFor(name){
+  const n = name.toLowerCase();
+  const map = [
+    [/hood|fit|cloth|shirt|tee|jacket|shoe|sneaker|wear|outfit/, '👕'],
+    [/bak|cook|kitchen|food|cake|bread|oven|recipe/, '🧁'],
+    [/room|home|desk|decor|furnitur|bed|plant/, '🛋️'],
+    [/trip|travel|vacation|flight|trav|japan|europe/, '✈️'],
+    [/game|gaming|console|ps5|xbox|switch/, '🎮'],
+    [/book|read|novel/, '📚'],
+    [/music|head|speaker|vinyl|guitar/, '🎧'],
+    [/gym|fit|workout|sport|run|bike/, '🏋️'],
+    [/coffee|tea|drink|cafe/, '☕'],
+    [/gift|surprise/, '🎁'],
+    [/car|drive|moto/, '🚗'],
+    [/cam|photo|lens/, '📷'],
+  ];
+  for(const [re, e] of map){ if(re.test(n)) return e; }
+  return '⭐';
+}
+
 const seed = [
-  {id:1, name:'Shop tools', items:[
-    {id:101, name:'Fluke 87V multimeter',            price:'$520', pri:'high',  got:false},
-    {id:102, name:'Hakko FX-888D soldering station', price:'$130', pri:'want',  got:true},
-    {id:103, name:'Oscilloscope (Rigol DHO900)',     price:'$540', pri:'want',  got:false},
+  {id:1, name:'Hoodies & fits', items:[
+    {id:101, name:'Essentials oversized hoodie (cream)', price:'$110', pri:'high',  got:false},
+    {id:102, name:'Carhartt beanie',                     price:'$25',  pri:'want',  got:true},
+    {id:103, name:'New Balance 9060s',                   price:'$170', pri:'want',  got:false},
+    {id:104, name:'Vintage Levi’s denim jacket',         price:'$90',  pri:'dream', got:false},
   ]},
-  {id:2, name:'Fabrication', items:[
-    {id:201, name:'Bambu Lab X1-Carbon 3D printer', price:'$1,449', pri:'high',  got:false},
-    {id:202, name:'Bench CNC mill (Tormach 440)',   price:'$6,800', pri:'dream', got:false},
+  {id:2, name:'Baking', items:[
+    {id:201, name:'KitchenAid stand mixer',     price:'$430', pri:'dream', got:false},
+    {id:202, name:'Digital kitchen scale',      price:'$22',  pri:'high',  got:true},
+    {id:203, name:'Good vanilla + Dutch cocoa', price:'$30',  pri:'want',  got:false},
+    {id:204, name:'Cast iron skillet',          price:'$45',  pri:'want',  got:false},
+  ]},
+  {id:3, name:'Room glow-up', items:[
+    {id:301, name:'LED strip lights',        price:'$28',  pri:'want', got:true},
+    {id:302, name:'Monstera + big pot',      price:'$40',  pri:'want', got:false},
+    {id:303, name:'Standing desk',           price:'$320', pri:'high', got:false},
+  ]},
+  {id:4, name:'Trips & someday', items:[
+    {id:401, name:'Japan in spring (sakura)', price:'—', pri:'dream', got:false},
+    {id:402, name:'Road trip out west',       price:'—', pri:'want',  got:false},
   ]},
 ];
 
@@ -231,7 +256,9 @@ function render(){
     const head = document.createElement('div');
     head.className = 'topic-head';
     const h2 = document.createElement('h2');
-    h2.textContent = t.name;
+    h2.innerHTML = '<span class="emoji"></span><span class="tname"></span>';
+    h2.querySelector('.emoji').textContent = emojiFor(t.name);
+    h2.querySelector('.tname').textContent = t.name;
     const right = document.createElement('div');
     right.className = 'right';
     const tcount = document.createElement('span');
