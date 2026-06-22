@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Wishlist — Arnnav Kudale</title>
-<meta name="description" content="Things Arnnav is saving up for, hunting down, or hoping to build next." />
+<meta name="description" content="Things Arnnav is saving up for, hunting down, or hoping to build next — organized by topic." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,9 +43,7 @@ nav.top{
 nav.top .inner{max-width:var(--maxw);margin:0 auto;padding:17px 36px;display:flex;align-items:center;justify-content:space-between}
 nav.top .brand{font-weight:600;font-size:15px;letter-spacing:-.01em;color:var(--fg)}
 nav.top ul{display:flex;gap:26px;list-style:none}
-nav.top ul a{
-  font-size:14px;color:var(--fg-1);transition:color .2s;position:relative;padding-bottom:2px;
-}
+nav.top ul a{font-size:14px;color:var(--fg-1);transition:color .2s;position:relative;padding-bottom:2px}
 nav.top ul a:hover{color:var(--fg)}
 nav.top ul a.active{color:var(--fg)}
 nav.top ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--fg-2)}
@@ -55,89 +53,83 @@ nav.top ul a.active::after{content:"";position:absolute;left:0;right:0;bottom:-1
   nav.top .inner{padding:14px 22px}
 }
 
-.kicker{
-  font-size:12.5px;color:var(--fg-2);letter-spacing:.16em;text-transform:uppercase;font-weight:600;
-}
+.kicker{font-size:12.5px;color:var(--fg-2);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
 
 /* ──────────────────  hero */
-.hero{padding:168px 0 76px;border-bottom:1px solid var(--line)}
+.hero{padding:168px 0 64px;border-bottom:1px solid var(--line)}
 .hero .kicker{margin-bottom:30px}
-.hero h1{
-  font-family:var(--serif);font-weight:400;font-size:clamp(52px,8.4vw,104px);line-height:.98;letter-spacing:-.015em;color:var(--fg);
-}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(52px,8.4vw,104px);line-height:.98;letter-spacing:-.015em;color:var(--fg)}
 .hero h1 em{font-style:italic;color:var(--accent)}
-.hero .lede{
-  margin-top:34px;max-width:600px;
-  font-size:19.5px;line-height:1.62;color:var(--fg-1);
-}
-@media (max-width:680px){.hero{padding:128px 0 56px}}
+.hero .lede{margin-top:34px;max-width:600px;font-size:19.5px;line-height:1.62;color:var(--fg-1)}
+@media (max-width:680px){.hero{padding:128px 0 48px}}
 
-/* ──────────────────  add form */
-.composer{padding:48px 0;border-bottom:1px solid var(--line)}
-.composer form{display:grid;grid-template-columns:1fr 150px 150px auto;gap:12px;align-items:stretch}
-.composer input,.composer select{
+/* ──────────────────  shared inputs */
+.fld{
   font-family:var(--sans);font-size:15px;color:var(--fg);
   background:var(--bg-1);border:1px solid var(--line-2);border-radius:7px;
-  padding:13px 15px;outline:none;transition:border-color .2s;
+  padding:12px 15px;outline:none;transition:border-color .2s;
 }
-.composer input::placeholder{color:var(--fg-2)}
-.composer input:focus,.composer select:focus{border-color:var(--accent)}
-.composer button{
+.fld::placeholder{color:var(--fg-2)}
+.fld:focus{border-color:var(--accent)}
+.btn{
   font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.01em;
   background:var(--accent);color:var(--bg);border:none;border-radius:7px;
-  padding:13px 24px;cursor:pointer;transition:opacity .2s;white-space:nowrap;
+  padding:12px 22px;cursor:pointer;transition:opacity .2s;white-space:nowrap;
 }
-.composer button:hover{opacity:.88}
-@media (max-width:680px){.composer form{grid-template-columns:1fr 1fr}.composer button{grid-column:1/-1}}
+.btn:hover{opacity:.88}
+.btn.ghost{background:transparent;color:var(--fg-1);border:1px solid var(--line-2)}
+.btn.ghost:hover{color:var(--fg);border-color:var(--fg-2);opacity:1}
 
-/* ──────────────────  toolbar */
-.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:32px 0 22px;flex-wrap:wrap}
+/* ──────────────────  add topic */
+.new-topic{padding:40px 0;border-bottom:1px solid var(--line)}
+.new-topic form{display:flex;gap:12px;flex-wrap:wrap}
+.new-topic .fld{flex:1;min-width:220px}
+
+/* toolbar */
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:34px 0 4px;flex-wrap:wrap}
 .filters{display:flex;gap:8px;flex-wrap:wrap}
-.chip{
-  font-size:13px;color:var(--fg-1);background:transparent;border:1px solid var(--line-2);
-  border-radius:999px;padding:7px 16px;cursor:pointer;transition:all .2s;font-family:var(--sans);
-}
+.chip{font-size:13px;color:var(--fg-1);background:transparent;border:1px solid var(--line-2);border-radius:999px;padding:7px 16px;cursor:pointer;transition:all .2s;font-family:var(--sans)}
 .chip:hover{color:var(--fg);border-color:var(--fg-2)}
 .chip.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 .count{font-size:13px;color:var(--fg-2);letter-spacing:.04em}
 
-/* ──────────────────  list */
-.list{padding-bottom:120px;border-top:1px solid var(--line)}
-.item{
-  display:grid;grid-template-columns:auto 1fr auto auto;gap:20px;align-items:center;
-  padding:24px 2px;border-bottom:1px solid var(--line);transition:opacity .2s;
-}
-.item .check{
-  width:22px;height:22px;border:1.5px solid var(--line-2);border-radius:50%;
-  cursor:pointer;flex:none;transition:all .2s;position:relative;
-}
+/* ──────────────────  topics */
+#topics{padding:24px 0 120px}
+.topic{border-top:1px solid var(--line);padding:40px 0}
+.topic-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:8px}
+.topic-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,4vw,38px);line-height:1.1;letter-spacing:-.01em}
+.topic-head .tcount{font-size:12.5px;color:var(--fg-2);letter-spacing:.12em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.topic-del{background:none;border:none;color:var(--fg-2);font-size:13px;cursor:pointer;font-family:var(--sans);transition:color .2s;padding:2px 0}
+.topic-del:hover{color:var(--accent)}
+
+/* item add row */
+.item-add{display:grid;grid-template-columns:1fr 130px 140px auto;gap:10px;margin:18px 0 6px}
+.item-add .fld,.item-add .btn{padding:11px 14px;font-size:14px}
+@media (max-width:680px){.item-add{grid-template-columns:1fr 1fr}.item-add .btn{grid-column:1/-1}}
+
+/* item rows */
+.item{display:grid;grid-template-columns:auto 1fr auto auto;gap:18px;align-items:center;padding:18px 2px;border-bottom:1px solid var(--line);transition:opacity .2s}
+.item:last-child{border-bottom:none}
+.item .check{width:21px;height:21px;border:1.5px solid var(--line-2);border-radius:50%;cursor:pointer;flex:none;transition:all .2s;position:relative}
 .item .check:hover{border-color:var(--accent)}
 .item.got .check{background:var(--accent);border-color:var(--accent)}
-.item.got .check::after{content:"";position:absolute;left:7px;top:3px;width:5px;height:10px;border:solid var(--bg);border-width:0 2px 2px 0;transform:rotate(45deg)}
-.item .body .name{font-size:18px;color:var(--fg);font-weight:500;letter-spacing:-.005em}
+.item.got .check::after{content:"";position:absolute;left:6.5px;top:3px;width:5px;height:9px;border:solid var(--bg);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.item .body .name{font-size:17px;color:var(--fg);font-weight:500;letter-spacing:-.005em}
 .item .body .meta{font-size:13px;color:var(--fg-2);margin-top:4px;display:flex;gap:10px;align-items:center}
 .item.got .body .name{color:var(--fg-2);text-decoration:line-through;text-decoration-color:var(--line-2)}
 .pri{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:5px;border:1px solid var(--line-2);color:var(--fg-1)}
 .pri.high{color:var(--accent);border-color:var(--accent)}
 .pri.dream{color:#7da6ff;border-color:#37456b}
-.price{font-family:var(--serif);font-size:20px;color:var(--fg);font-style:italic}
-.del{
-  background:none;border:none;color:var(--fg-2);font-size:20px;line-height:1;cursor:pointer;
-  padding:4px 8px;transition:color .2s;font-family:var(--sans);
-}
+.price{font-family:var(--serif);font-size:19px;color:var(--fg);font-style:italic}
+.del{background:none;border:none;color:var(--fg-2);font-size:20px;line-height:1;cursor:pointer;padding:4px 8px;transition:color .2s;font-family:var(--sans)}
 .del:hover{color:var(--accent)}
-@media (max-width:680px){
-  .item{grid-template-columns:auto 1fr auto;gap:14px}
-  .price{display:none}
-}
+.topic-empty{padding:10px 2px;color:var(--fg-2);font-size:14px;font-style:italic;font-family:var(--serif)}
+@media (max-width:680px){.item{grid-template-columns:auto 1fr auto;gap:14px}.price{display:none}}
 
-.empty{padding:90px 0;text-align:center;color:var(--fg-2)}
+.empty{padding:90px 0;text-align:center;color:var(--fg-2);border-top:1px solid var(--line)}
 .empty .big{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--fg-1);margin-bottom:8px}
 
-footer{
-  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  padding:40px 0;border-top:1px solid var(--line);color:var(--fg-2);font-size:13.5px;
-}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:40px 0;border-top:1px solid var(--line);color:var(--fg-2);font-size:13.5px}
 </style>
 </head>
 <body>
@@ -160,39 +152,29 @@ footer{
     <div class="kicker">Saving up · Hunting down · Building next</div>
     <h1>The <em>wishlist</em>.</h1>
     <p class="lede">
-      Tools, parts, and the occasional pipe dream — everything I'm working toward for the bench, the shop, and the next build. Saved right here in your browser.
+      Organized by topic — make your own sections, then add what you want under each. Tools, parts, pipe dreams. All saved right here in your browser.
     </p>
   </section>
 
-  <section class="composer">
-    <form id="add-form">
-      <input id="f-name" type="text" placeholder="What do you want?" autocomplete="off" required />
-      <input id="f-price" type="text" placeholder="Price (e.g. $250)" autocomplete="off" />
-      <select id="f-pri">
-        <option value="want">Want</option>
-        <option value="high">Need it</option>
-        <option value="dream">Dream</option>
-      </select>
-      <button type="submit">Add to list</button>
+  <section class="new-topic">
+    <form id="topic-form">
+      <input id="t-name" class="fld" type="text" placeholder="New topic — e.g. Shop tools, Race car, Books…" autocomplete="off" required />
+      <button class="btn" type="submit">Add topic</button>
     </form>
   </section>
 
-  <section>
-    <div class="toolbar">
-      <div class="filters" id="filters">
-        <button class="chip on" data-filter="all">All</button>
-        <button class="chip" data-filter="open">Wanted</button>
-        <button class="chip" data-filter="got">Got it</button>
-        <button class="chip" data-filter="high">Need it</button>
-        <button class="chip" data-filter="dream">Dreams</button>
-      </div>
-      <div class="count" id="count"></div>
+  <div class="toolbar">
+    <div class="filters" id="filters">
+      <button class="chip on" data-filter="all">All</button>
+      <button class="chip" data-filter="open">Wanted</button>
+      <button class="chip" data-filter="got">Got it</button>
+      <button class="chip" data-filter="high">Need it</button>
+      <button class="chip" data-filter="dream">Dreams</button>
     </div>
-  </section>
+    <div class="count" id="count"></div>
+  </div>
 
-  <section class="list">
-    <div id="list"></div>
-  </section>
+  <div id="topics"></div>
 
   <footer>
     <div>© 2026 Arnnav Kudale</div>
@@ -202,96 +184,161 @@ footer{
 </main>
 
 <script>
-const KEY = 'ak-wishlist-v1';
+const KEY = 'ak-wishlist-v2';
 const PRI_LABEL = {want:'Want', high:'Need it', dream:'Dream'};
 
 const seed = [
-  {id:1, name:'Bambu Lab X1-Carbon 3D printer', price:'$1,449', pri:'high',  got:false},
-  {id:2, name:'Fluke 87V multimeter',            price:'$520',   pri:'high',  got:false},
-  {id:3, name:'Hakko FX-888D soldering station', price:'$130',   pri:'want',  got:true},
-  {id:4, name:'Bench CNC mill (Tormach 440)',    price:'$6,800', pri:'dream', got:false},
-  {id:5, name:'Oscilloscope (Rigol DHO900)',     price:'$540',   pri:'want',  got:false},
+  {id:1, name:'Shop tools', items:[
+    {id:101, name:'Fluke 87V multimeter',            price:'$520', pri:'high',  got:false},
+    {id:102, name:'Hakko FX-888D soldering station', price:'$130', pri:'want',  got:true},
+    {id:103, name:'Oscilloscope (Rigol DHO900)',     price:'$540', pri:'want',  got:false},
+  ]},
+  {id:2, name:'Fabrication', items:[
+    {id:201, name:'Bambu Lab X1-Carbon 3D printer', price:'$1,449', pri:'high',  got:false},
+    {id:202, name:'Bench CNC mill (Tormach 440)',   price:'$6,800', pri:'dream', got:false},
+  ]},
 ];
 
-let items = load();
+let topics = load();
 let filter = 'all';
-let nextId = items.reduce((m,i)=>Math.max(m,i.id),0) + 1;
+let nextId = freshId();
 
+function freshId(){
+  let m = 0;
+  topics.forEach(t=>{ m=Math.max(m,t.id); t.items.forEach(i=>m=Math.max(m,i.id)); });
+  return m + 1;
+}
 function load(){
-  try{
-    const raw = localStorage.getItem(KEY);
-    if(raw) return JSON.parse(raw);
-  }catch(e){}
+  try{ const raw = localStorage.getItem(KEY); if(raw) return JSON.parse(raw); }catch(e){}
   return seed.slice();
 }
-function save(){ try{ localStorage.setItem(KEY, JSON.stringify(items)); }catch(e){} }
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(topics)); }catch(e){} }
 
-const listEl = document.getElementById('list');
+const topicsEl = document.getElementById('topics');
 const countEl = document.getElementById('count');
 
-function shown(){
-  return items.filter(it=>{
-    if(filter==='all')  return true;
-    if(filter==='open') return !it.got;
-    if(filter==='got')  return it.got;
-    return it.pri===filter;
-  });
+function matches(it){
+  if(filter==='all')  return true;
+  if(filter==='open') return !it.got;
+  if(filter==='got')  return it.got;
+  return it.pri===filter;
 }
 
 function render(){
-  const rows = shown();
-  listEl.innerHTML = '';
+  topicsEl.innerHTML = '';
 
-  if(!rows.length){
-    listEl.innerHTML = '<div class="empty"><div class="big">Nothing here yet.</div><div>Add something above, or switch filters.</div></div>';
-  }else{
-    for(const it of rows){
-      const row = document.createElement('div');
-      row.className = 'item' + (it.got ? ' got' : '');
-      const priClass = it.pri==='high' ? 'pri high' : it.pri==='dream' ? 'pri dream' : 'pri';
-      row.innerHTML =
-        '<div class="check" role="checkbox" aria-checked="'+it.got+'" tabindex="0"></div>' +
-        '<div class="body"><div class="name"></div>' +
-          '<div class="meta"><span class="'+priClass+'">'+PRI_LABEL[it.pri]+'</span>' +
-          (it.got ? '<span>· crossed off</span>' : '') + '</div></div>' +
-        '<div class="price">'+(it.price||'')+'</div>' +
-        '<button class="del" title="Remove" aria-label="Remove">&times;</button>';
-      row.querySelector('.name').textContent = it.name;
-      row.querySelector('.check').addEventListener('click', ()=>toggle(it.id));
-      row.querySelector('.check').addEventListener('keydown', e=>{ if(e.key===' '||e.key==='Enter'){ e.preventDefault(); toggle(it.id); }});
-      row.querySelector('.del').addEventListener('click', ()=>remove(it.id));
-      listEl.appendChild(row);
-    }
+  if(!topics.length){
+    topicsEl.innerHTML = '<div class="empty"><div class="big">No topics yet.</div><div>Add one above to start your list.</div></div>';
+    countEl.textContent = '';
+    return;
   }
 
-  const got = items.filter(i=>i.got).length;
-  countEl.textContent = items.length + ' item' + (items.length!==1?'s':'') + ' · ' + got + ' crossed off';
+  for(const t of topics){
+    const visible = t.items.filter(matches);
+
+    const sec = document.createElement('section');
+    sec.className = 'topic';
+
+    const head = document.createElement('div');
+    head.className = 'topic-head';
+    const h2 = document.createElement('h2');
+    h2.textContent = t.name;
+    const right = document.createElement('div');
+    right.style.cssText = 'display:flex;align-items:center;gap:16px';
+    const tcount = document.createElement('span');
+    tcount.className = 'tcount';
+    const gotN = t.items.filter(i=>i.got).length;
+    tcount.textContent = t.items.length + ' item' + (t.items.length!==1?'s':'') + ' · ' + gotN + ' got';
+    const tdel = document.createElement('button');
+    tdel.className = 'topic-del';
+    tdel.textContent = 'Remove topic';
+    tdel.addEventListener('click', ()=>removeTopic(t.id));
+    right.appendChild(tcount); right.appendChild(tdel);
+    head.appendChild(h2); head.appendChild(right);
+    sec.appendChild(head);
+
+    // add-item row
+    const form = document.createElement('form');
+    form.className = 'item-add';
+    form.innerHTML =
+      '<input class="fld i-name" type="text" placeholder="Add an item…" autocomplete="off" required />' +
+      '<input class="fld i-price" type="text" placeholder="Price" autocomplete="off" />' +
+      '<select class="fld i-pri"><option value="want">Want</option><option value="high">Need it</option><option value="dream">Dream</option></select>' +
+      '<button class="btn" type="submit">Add</button>';
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      const name = form.querySelector('.i-name').value.trim();
+      if(!name) return;
+      t.items.unshift({
+        id: nextId++, name,
+        price: form.querySelector('.i-price').value.trim(),
+        pri: form.querySelector('.i-pri').value,
+        got: false,
+      });
+      save(); render();
+    });
+    sec.appendChild(form);
+
+    // items
+    if(!t.items.length){
+      const e = document.createElement('div');
+      e.className = 'topic-empty';
+      e.textContent = 'Nothing here yet — add the first thing above.';
+      sec.appendChild(e);
+    }else if(!visible.length){
+      const e = document.createElement('div');
+      e.className = 'topic-empty';
+      e.textContent = 'Nothing matches this filter.';
+      sec.appendChild(e);
+    }else{
+      for(const it of visible){
+        const row = document.createElement('div');
+        row.className = 'item' + (it.got ? ' got' : '');
+        const priClass = it.pri==='high' ? 'pri high' : it.pri==='dream' ? 'pri dream' : 'pri';
+        row.innerHTML =
+          '<div class="check" role="checkbox" aria-checked="'+it.got+'" tabindex="0"></div>' +
+          '<div class="body"><div class="name"></div>' +
+            '<div class="meta"><span class="'+priClass+'">'+PRI_LABEL[it.pri]+'</span>' +
+            (it.got ? '<span>· crossed off</span>' : '') + '</div></div>' +
+          '<div class="price">'+(it.price||'')+'</div>' +
+          '<button class="del" title="Remove" aria-label="Remove">&times;</button>';
+        row.querySelector('.name').textContent = it.name;
+        row.querySelector('.check').addEventListener('click', ()=>toggle(it.id));
+        row.querySelector('.check').addEventListener('keydown', e=>{ if(e.key===' '||e.key==='Enter'){ e.preventDefault(); toggle(it.id); }});
+        row.querySelector('.del').addEventListener('click', ()=>removeItem(t.id, it.id));
+        sec.appendChild(row);
+      }
+    }
+
+    topicsEl.appendChild(sec);
+  }
+
+  const all = topics.flatMap(t=>t.items);
+  const got = all.filter(i=>i.got).length;
+  countEl.textContent = topics.length + ' topic' + (topics.length!==1?'s':'') + ' · ' + all.length + ' item' + (all.length!==1?'s':'') + ' · ' + got + ' got';
 }
 
-function toggle(id){ const it = items.find(i=>i.id===id); if(it){ it.got=!it.got; save(); render(); } }
-function remove(id){ items = items.filter(i=>i.id!==id); save(); render(); }
+function toggle(id){
+  for(const t of topics){ const it=t.items.find(i=>i.id===id); if(it){ it.got=!it.got; break; } }
+  save(); render();
+}
+function removeItem(tid, id){
+  const t = topics.find(t=>t.id===tid); if(t){ t.items = t.items.filter(i=>i.id!==id); save(); render(); }
+}
+function removeTopic(id){
+  topics = topics.filter(t=>t.id!==id); save(); render();
+}
 
-document.getElementById('add-form').addEventListener('submit', e=>{
+document.getElementById('topic-form').addEventListener('submit', e=>{
   e.preventDefault();
-  const name = document.getElementById('f-name').value.trim();
+  const name = document.getElementById('t-name').value.trim();
   if(!name) return;
-  items.unshift({
-    id: nextId++,
-    name,
-    price: document.getElementById('f-price').value.trim(),
-    pri: document.getElementById('f-pri').value,
-    got: false,
-  });
-  save();
-  e.target.reset();
-  document.getElementById('f-name').focus();
-  if(filter==='got') filter='all', syncChips();
-  render();
+  topics.push({id: nextId++, name, items:[]});
+  save(); e.target.reset(); render();
+  topicsEl.lastElementChild.scrollIntoView({behavior:'smooth', block:'center'});
 });
 
-function syncChips(){
-  document.querySelectorAll('#filters .chip').forEach(c=>c.classList.toggle('on', c.dataset.filter===filter));
-}
+function syncChips(){ document.querySelectorAll('#filters .chip').forEach(c=>c.classList.toggle('on', c.dataset.filter===filter)); }
 document.getElementById('filters').addEventListener('click', e=>{
   const chip = e.target.closest('.chip'); if(!chip) return;
   filter = chip.dataset.filter; syncChips(); render();
